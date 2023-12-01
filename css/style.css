@@ -120,7 +120,7 @@ header nav ul {
 }
 header nav ul li {
   padding: 7px;
-  color: #ebebeb;
+  color: #d1d1d1;
   transition: 1s;
   cursor: pointer;
 }
@@ -131,7 +131,7 @@ header nav .menuContainer {
   opacity: 0;
   width: 25px;
   height: 25px;
-  background-color: #ebebeb;
+  background-color: #d1d1d1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -162,7 +162,7 @@ header nav .menuContainer {
     position: fixed;
     right: -150px;
     top: 0;
-    background-color: #ebebeb;
+    background-color: #d1d1d1;
     transition: all 1s;
     box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1254901961);
   }
@@ -180,7 +180,7 @@ header nav .menuContainer {
     opacity: 1;
     width: 25px;
     height: 25px;
-    background-color: #ebebeb;
+    background-color: #d1d1d1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -195,6 +195,137 @@ header nav .menuContainer {
     transition: 1s;
     opacity: 50%;
     color: #a3a3a3;
+  }
+}
+body {
+  position: relative;
+}
+body .popupContainer {
+  position: absolute;
+  top: -455px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 420px;
+  height: 450px;
+  background-color: #ebebeb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1254901961);
+  transition: 2s;
+  border-radius: 5px;
+}
+body .popupContainer .popup {
+  width: 93%;
+  height: 93%;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #f7f9f9;
+  justify-content: center;
+  position: relative;
+}
+body .popupContainer .popup p {
+  font-family: "poppins";
+  color: #a3a3a3;
+  padding: 10px 20px 10px 20px;
+  text-align: justify;
+}
+body .popupContainer .popup .logoPopup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .popupContainer .popup .logoPopup span {
+  font-size: 20px;
+  font-family: "poppins";
+}
+body .popupContainer .popup .logoPopup img {
+  width: 50px;
+}
+body .popupContainer .popup button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  right: -20px;
+  top: -20px;
+  color: #f7f9f9;
+  cursor: pointer;
+  border: none;
+  background-color: #d1d1d1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .top {
+  top: 30px;
+}
+
+@media (max-width: 737px) {
+  body {
+    position: relative;
+  }
+  body .popupContainer {
+    position: absolute;
+    top: -520px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 350px;
+    height: 505px;
+    background-color: #ebebeb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1254901961);
+    transition: 2s;
+    border-radius: 5px;
+  }
+  body .popupContainer .popup {
+    width: 93%;
+    height: 93%;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #f7f9f9;
+    justify-content: center;
+    position: relative;
+  }
+  body .popupContainer .popup p {
+    font-family: "poppins";
+    color: #a3a3a3;
+    padding: 10px 20px 10px 20px;
+    text-align: justify;
+  }
+  body .popupContainer .popup .logoPopup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  body .popupContainer .popup .logoPopup span {
+    font-size: 20px;
+    font-family: "poppins";
+  }
+  body .popupContainer .popup .logoPopup img {
+    width: 50px;
+  }
+  body .popupContainer .popup button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    color: #f7f9f9;
+    cursor: pointer;
+    border: none;
+    background-color: #d1d1d1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body .top {
+    top: 90px;
   }
 }
 

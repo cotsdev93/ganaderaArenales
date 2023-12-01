@@ -1,0 +1,135 @@
+body {
+  position: relative;
+
+  .popupContainer {
+    position: absolute;
+    top: -455px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 420px;
+    height: 450px;
+    background-color: $grisMasClaro;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 2px 2px #00000020;
+    transition: 2s;
+    border-radius: 5px;
+    .popup {
+      width: 93%;
+      height: 93%;
+      align-items: center;
+      border-radius: 10px;
+      background-color: $blanco;
+      justify-content: center;
+      position: relative;
+      p {
+        font-family: "poppins";
+        color: $grisOscuro;
+        padding: 10px 20px 10px 20px;
+        text-align: justify;
+      }
+      .logoPopup {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        span {
+          font-size: 20px;
+          font-family: "poppins";
+        }
+        img {
+          width: 50px;
+        }
+      }
+      button {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        position: absolute;
+        right: -20px;
+        top: -20px;
+        color: $blanco;
+        cursor: pointer;
+        border: none;
+        background-color: $grisClaro;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+  .top {
+    top:30px
+  }
+}
+
+
+@media (max-width: 737px) {
+    body {
+        position: relative;
+      
+        .popupContainer {
+          position: absolute;
+          top: -520px;
+          left: 0;
+          right: 0;
+          margin: auto;
+          width: 350px;
+          height: 505px;
+          background-color: $grisMasClaro;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-shadow: 0px 0px 2px 2px #00000020;
+          transition: 2s;
+          border-radius: 5px;
+          .popup {
+            width: 93%;
+            height: 93%;
+            align-items: center;
+            border-radius: 10px;
+            background-color: $blanco;
+            justify-content: center;
+            position: relative;
+            p {
+              font-family: "poppins";
+              color: $grisOscuro;
+              padding: 10px 20px 10px 20px;
+              text-align: justify;
+            }
+            .logoPopup {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              span {
+                font-size: 20px;
+                font-family: "poppins";
+              }
+              img {
+                width: 50px;
+              }
+            }
+            button {
+              width: 30px;
+              height: 30px;
+              border-radius: 50%;
+              position: absolute;
+              right: -20px;
+              top: -20px;
+              color: $blanco;
+              cursor: pointer;
+              border: none;
+              background-color: $grisClaro;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+        }
+        .top {
+          top:90px
+        }
+      }
+      
+}

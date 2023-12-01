@@ -19,9 +19,9 @@ window.addEventListener("DOMContentLoaded", () => {
       });
     }, 3000);
 
-    setTimeout(()=>{
-        intro.style.top = "-100vh"
-    },3200)
+    setTimeout(() => {
+      intro.style.top = "-100vh";
+    }, 3200);
   });
 });
 
@@ -30,6 +30,19 @@ const navMenu = document.querySelector(".navMenu");
 
 menu.addEventListener("click", () => {
   navMenu.classList.toggle("show");
-  menu.classList.toggle("opacity")
+  menu.classList.toggle("opacity");
 });
 
+const popup = document.querySelector(".popupContainer");
+const buttonx = document.getElementById("x")
+function openPopup() {
+  setTimeout(() => {
+    popup.classList.add("top");
+    console.log("funciona")
+  }, 7000);
+}
+openPopup();
+
+buttonx.addEventListener("click", ()=>{
+  popup.classList.remove("top");
+})
