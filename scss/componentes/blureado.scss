@@ -1,0 +1,10 @@
+body {
+  .blur {
+    filter: blur(2px);
+    transition:1s;
+  }
+  .desblureado{
+    filter: none;
+    transition:2s
+  }
+}

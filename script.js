@@ -35,14 +35,16 @@ menu.addEventListener("click", () => {
 
 const popup = document.querySelector(".popupContainer");
 const buttonx = document.getElementById("x")
+const blureado = document.querySelector(".blureado")
 function openPopup() {
   setTimeout(() => {
     popup.classList.add("top");
-    console.log("funciona")
-  }, 7000);
+    blureado.classList.add("blur")
+  }, 1000);
 }
 openPopup();
 
 buttonx.addEventListener("click", ()=>{
   popup.classList.remove("top");
+  blureado.classList.add("desblureado")
 })

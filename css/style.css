@@ -215,6 +215,7 @@ body .popupContainer {
   box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1254901961);
   transition: 2s;
   border-radius: 5px;
+  z-index: 3;
 }
 body .popupContainer .popup {
   width: 93%;
@@ -327,6 +328,14 @@ body .top {
   body .top {
     top: 90px;
   }
+}
+body .blur {
+  filter: blur(2px);
+  transition: 1s;
+}
+body .desblureado {
+  filter: none;
+  transition: 2s;
 }
 
 /*# sourceMappingURL=style.css.map */
