@@ -40,7 +40,7 @@ function openPopup() {
   setTimeout(() => {
     popup.classList.add("top");
     blureado.classList.add("blur")
-  }, 1000);
+  }, 7c:\Users\aalfa\Desktop\ganaderaArenales\index.html000);
 }
 openPopup();
 
