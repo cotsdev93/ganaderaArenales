@@ -40,9 +40,9 @@ function openPopup() {
   setTimeout(() => {
     popup.classList.add("top");
     blureado.classList.add("blur");
-  }, 1000);
+  }, 7000);
 }
-// openPopup();
+openPopup();
 
 buttonx.addEventListener("click", () => {
   popup.classList.remove("top");
@@ -148,6 +148,20 @@ function initMap() {
     "USA"
   );
 
-  
+  const rusia = crearMarcador(
+    55.75222,
+    37.61556,
+    "assets/img/marker.png",
+    "marcador",
+    "Rusia"
+  );
+
+  const venezuela = crearMarcador(
+    7.48801,
+    -65.87919,
+    "assets/img/marker.png",
+    "marcador",
+    "Venezuela"
+  );
 }
 initMap();

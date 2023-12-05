@@ -6,7 +6,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0px 0px 5px 2px #00000020;
+    box-shadow:$shadow;
     .logoNav {
       display: flex;
       align-items: center;
@@ -23,7 +23,8 @@ header {
       display: flex;
       align-items: center;
       font-family: "Poppins";
-      padding-right: 40px;
+      padding-left: 150px;
+      z-index: 2;
       li {
         padding: 7px;
         color: $grisClaro;
@@ -44,6 +45,7 @@ header {
       align-items: center;
       border-radius: 3px;
       color: $blanco;
+      z-index: 2;
     }
   }
 }
@@ -68,27 +70,28 @@ header {
         flex-direction: column;
         padding-top: 80px;
         padding-right: 0px;
+        padding-left: 0px;
         width: 150px;
         height: 100%;
-        position:fixed;
+        position: fixed;
         right: -150px;
-        top:0;
+        top: 0;
         background-color: $grisClaro;
         transition: all 1s;
-        box-shadow: 0px 0px 1px 1px #00000020;        z-index: 3;
+        box-shadow: 0px 0px 1px 1px #00000020;
 
         li {
           margin-top: 10px;
-          color: $grisOscuro;
+          color: $blanco;
           padding-top: 20px;
           border-top: 1px solid #00000020;
-          border-radius: 2;        z-index: 3;
+          border-radius: 2;
         }
       }
       .show {
         right: 0px;
       }
-  
+
       .menuContainer {
         opacity: 1;
         width: 25px;
@@ -99,7 +102,6 @@ header {
         align-items: center;
         border-radius: 3px;
         color: $blanco;
-        z-index: 3;
         margin-right: 20px;
         transition: 1s;
         opacity: 100%;
@@ -107,7 +109,7 @@ header {
       .opacity {
         transition: 1s;
         opacity: 50%;
-        color: $grisOscuro
+        color: $grisOscuro;
       }
     }
   }
