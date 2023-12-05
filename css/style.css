@@ -353,7 +353,7 @@ body main .exportacion {
   display: flex;
   flex-direction: column;
   position: relative;
-  z-index: -1;
+  z-index: 0;
 }
 body main .exportacion h3 {
   padding: 10px 0px 10px 0px;
@@ -384,7 +384,7 @@ body main:focus, body main:active {
     display: flex;
     flex-direction: column;
     position: relative;
-    z-index: -1;
+    z-index: 0;
   }
   body main .exportacion h3 {
     padding: 10px 0px 10px 0px;
