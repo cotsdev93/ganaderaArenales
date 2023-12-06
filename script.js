@@ -48,7 +48,44 @@ buttonx.addEventListener("click", () => {
   popup.classList.remove("top");
   blureado.classList.add("desblureado");
 });
+const btnLeft = document.querySelector(".btnLeft");
+const btnRight = document.querySelector(".btnRight");
+const slider = document.getElementById("slider");
+const sliderSection = document.querySelectorAll(".sliderSection");
 
+btnLeft.addEventListener("click", (e) => moveToLeft());
+btnRight.addEventListener("click", (e) => moveToRight());
+
+setInterval(() => {
+  moveToRight();
+}, 5000);
+
+let operacion = 0;
+let counter = 0;
+let widthImg = 100 / sliderSection.length;
+function moveToRight() {
+  if (counter >= sliderSection.length - 1) {
+    counter = 0;
+    operacion = 0;
+    slider.style.transform = `translate(-${operacion}%)`;
+    return;
+  }
+  counter++;
+  operacion = operacion + widthImg;
+  slider.style.transform = `translate(-${operacion}%)`;
+}
+
+function moveToLeft() {
+  counter--;
+  if (counter < 0) {
+    counter = sliderSection.length - 1;
+    operacion = widthImg * (sliderSection.length - 1);
+    slider.style.transform = `translate(-${operacion}%)`;
+    return;
+  }
+  operacion = operacion - widthImg;
+  slider.style.transform = `translate(-${operacion}%)`;
+}
 function initMap() {
   var isSmallScreen = window.innerWidth <= 737;
   var centerPosition = isSmallScreen
@@ -100,7 +137,6 @@ function initMap() {
       },
     ],
   };
-
   map = new google.maps.Map(document.getElementById("map"), options);
 
   function crearMarcador(lat, lng, iconUrl, title, infoContent) {
@@ -131,7 +167,6 @@ function initMap() {
     return marker;
   }
 
-  // Uso de la función para crear el marcador de China
   const china = crearMarcador(
     35.86166,
     104.195397,
@@ -162,6 +197,30 @@ function initMap() {
     "assets/img/marker.png",
     "marcador",
     "Venezuela"
+  );
+
+  const colombia = crearMarcador(
+    5.963889,
+    -73.796387,
+    "assets/img/marker.png",
+    "marcador",
+    "Colombia"
+  );
+
+  const brasil = crearMarcador(
+    -6,
+    -50.796387,
+    "assets/img/marker.png",
+    "marcador",
+    "Brasil"
+  );
+
+  const sudafrica = crearMarcador(
+    -32,
+    25,
+    "assets/img/marker.png",
+    "marcador",
+    "Sudafrica"
   );
 }
 initMap();

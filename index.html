@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <!-- HOJA DE ESTILO  -->
     <link rel="stylesheet" href="./css/style.css" />
     <!-- FONT -->
@@ -13,7 +16,7 @@
       rel="stylesheet"
     />
     <title>Ganadera Arenales</title>
-    <link rel="icon" href="./assets/img/logoSolo.png" type="image/x-icon">
+    <link rel="icon" href="./assets/img/logoSolo.png" type="image/x-icon" />
 
     <!-- API Maps -->
     <script
@@ -27,17 +30,22 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- BOX ICONS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <script src="./script.js" defer></script>
   </head>
 
   <body>
-    <div class="intro">
+    <!-- <div class="intro">
       <h1 class="logoHeader">
         <span class="logo">Ganadera</span>
         <img class="logo" src="./assets/img/logoSolo.png" alt="" />
         <span class="logo">Arenales</span>
       </h1>
-    </div>
+    </div> -->
     <div class="popupContainer">
       <div class="popup">
         <p>
@@ -81,6 +89,21 @@
         </nav>
       </header>
       <main>
+        <div class="sliderContainer">
+          <div class="slider" id="slider">
+            <section class="sliderSection">
+              <img src="../assets/img/slider01.jpg" alt="" />
+            </section>
+            <section class="sliderSection">
+              <img src="../assets/img/slider02.jpeg" alt="" />
+            </section>
+            <section class="sliderSection">
+              <img src="../assets/img/slider03.jpg" alt="" />
+            </section>
+          </div>
+          <div class="btnLeft"><i class="bx bx-chevron-left"></i></div>
+          <div class="btnRight"><i class="bx bx-chevron-right"></i></div>
+        </div>
         <div class="exportacion">
           <div class="exportacionContainer">
             <h3>Paises Clientes</h3>
