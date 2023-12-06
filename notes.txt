@@ -34,3 +34,13 @@ Swift argentina https://sitio.swift.com.ar/
 unión agrícola https://www.uaa.com.ar/carnes/
 dinardi http://www.dariodinardi.com.ar/
 black bamboo https://www.bbe-sa.com.ar/
+
+
+Imagen de la Vaca:
+"De la pradera a tu mesa: Criadas con cuidado, nuestras vacas proporcionan carne de calidad superior. Descubre el auténtico sabor en cada bocado."
+
+Imagen del Pedazo de Carne Crudo:
+"Calidad que se ve, calidad que se prueba. Cada corte es seleccionado con precisión para brindarte la frescura y el sabor que mereces."
+
+Imagen de Carne en la Parrilla:
+"Una experiencia de parrilla inigualable: Nuestra carne de primera se asa a la perfección para resaltar los sabores intensos y la jugosidad en cada plato."

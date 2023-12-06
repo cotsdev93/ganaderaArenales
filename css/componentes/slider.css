@@ -1,130 +1,17 @@
-.sliderContainer {
-  width: 100%;
-  height: 400px;
-  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1882352941);
-  overflow: hidden;
-  position: relative;
-}
-.sliderContainer .slider {
-  width: 300%;
-  height: 100%;
-  display: flex;
-  transition: 1s all ease;
-}
-.sliderContainer .slider .sliderSection {
-  width: 33.3333333333%;
-  height: 100%;
-  position: relative;
-}
-.sliderContainer .slider .sliderSection img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.sliderContainer .slider .sliderSection h3 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.sliderContainer .btnLeft,
-.sliderContainer .btnRight {
-  display: flex;
-  position: absolute;
-  top: 45%;
-  font-size: 1.5rem;
-  background-color: rgba(233, 233, 233, 0.1882352941);
-  padding: 5px;
-  font-weight: 900;
-  cursor: pointer;
-  color: rgba(73, 72, 72, 0.5058823529);
-  transform: translate(0, -50%);
-  transition: background-color 0.5s ease, color 0.2s ease;
-  user-select: none;
-}
-.sliderContainer .btnLeft:hover,
-.sliderContainer .btnRight:hover {
-  background-color: rgba(255, 255, 255, 0.5019607843);
-}
-.sliderContainer .btnLeft:active,
-.sliderContainer .btnRight:active {
-  color: white;
-}
-.sliderContainer .btnLeft {
-  left: 10px;
-  display: flex;
-  justify-content: center;
-  width: 35px;
-  border-radius: 50%;
-}
-.sliderContainer .btnRight {
-  display: flex;
-  justify-content: center;
-  width: 35px;
-  right: 10px;
-  border-radius: 50%;
-}
+/* Error: Undefined variable.
+ *    ,
+ * 31 |           color: $blanco;
+ *    |                  ^^^^^^^
+ *    '
+ *   scss\componentes\slider.scss 31:18  root stylesheet */
 
-@media screen and (max-width: 737px) {
-  .sliderContainer {
-    width: 100%;
-    height: 500px;
-    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1882352941);
-    overflow: hidden;
-    position: relative;
-  }
-  .sliderContainer .slider {
-    width: 300%;
-    height: 100%;
-    display: flex;
-    transition: 1s all ease;
-  }
-  .sliderContainer .slider .sliderSection {
-    width: 33.3333333333%;
-    height: 100%;
-  }
-  .sliderContainer .slider .sliderSection img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .sliderContainer .btnLeft,
-  .sliderContainer .btnRight {
-    display: flex;
-    position: absolute;
-    top: 45%;
-    font-size: 1.5rem;
-    background-color: rgba(255, 255, 255, 0.3764705882);
-    padding: 5px;
-    font-weight: 900;
-    cursor: pointer;
-    color: rgba(73, 72, 72, 0.5058823529);
-    transform: translate(0, -50%);
-    transition: background-color 0.5s ease, color 0.2s ease;
-    user-select: none;
-  }
-  .sliderContainer .btnLeft:hover,
-  .sliderContainer .btnRight:hover {
-    background-color: rgba(209, 209, 209, 0.502);
-  }
-  .sliderContainer .btnLeft:active,
-  .sliderContainer .btnRight:active {
-    color: white;
-  }
-  .sliderContainer .btnLeft {
-    left: 10px;
-    display: flex;
-    justify-content: center;
-    width: 35px;
-    border-radius: 50%;
-  }
-  .sliderContainer .btnRight {
-    display: flex;
-    justify-content: center;
-    width: 35px;
-    right: 10px;
-    border-radius: 50%;
-  }
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 31 \2502            color: $blanco;\d\a    \2502                   ^^^^^^^\a    \2575 \a   scss\\componentes\\slider.scss 31:18  root stylesheet";
 }
-
-/*# sourceMappingURL=slider.css.map */

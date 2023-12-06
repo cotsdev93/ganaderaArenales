@@ -1,3 +1,5 @@
+AOS.init()
+
 let intro = document.querySelector(".intro");
 let logo = document.querySelector(".logoHeader");
 let logoSpan = document.querySelectorAll(".logo");
@@ -36,6 +38,7 @@ menu.addEventListener("click", () => {
 const popup = document.querySelector(".popupContainer");
 const buttonx = document.getElementById("x");
 const blureado = document.querySelector(".blureado");
+
 function openPopup() {
   setTimeout(() => {
     popup.classList.add("top");
@@ -56,12 +59,11 @@ const sliderSection = document.querySelectorAll(".sliderSection");
 btnLeft.addEventListener("click", (e) => moveToLeft());
 btnRight.addEventListener("click", (e) => moveToRight());
 
-setTimeout(() => {
-  setInterval(() => {
-  moveToRight();
-}, 5000);
-}, 9000);
-
+// setTimeout(() => {
+//   setInterval(() => {
+//   moveToRight();
+// }, 5000);
+// }, 12000);
 
 let operacion = 0;
 let counter = 0;
