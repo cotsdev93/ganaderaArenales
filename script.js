@@ -56,9 +56,12 @@ const sliderSection = document.querySelectorAll(".sliderSection");
 btnLeft.addEventListener("click", (e) => moveToLeft());
 btnRight.addEventListener("click", (e) => moveToRight());
 
-setInterval(() => {
+setTimeout(() => {
+  setInterval(() => {
   moveToRight();
 }, 5000);
+}, 9000);
+
 
 let operacion = 0;
 let counter = 0;
