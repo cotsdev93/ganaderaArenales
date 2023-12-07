@@ -20,7 +20,7 @@
         position: relative;
       }
 
-      .textTitle {
+      .textTitle01 {
         width: 400px;
         position: absolute;
         top: 5%;
@@ -32,7 +32,57 @@
           text-shadow: -3px 3px 1px #00000080;
         }
       }
-      .text {
+      .text01 {
+        max-width: 50%;
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        p {
+          color: $blanco;
+          text-shadow: -2px 1px 0px #00000080;
+          padding-right: 20px;
+          text-align: justify;
+          line-height: 17px;
+        }
+      }
+      .textTitle02 {
+        width: 400px;
+        position: absolute;
+        top: 5%;
+        left: 7%;
+        line-height: 50px;
+        font-size: 50px;
+        p {
+          color: $blanco;
+          text-shadow: -3px 3px 1px #00000080;
+        }
+      }
+      .text02 {
+        max-width: 50%;
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        p {
+          color: $blanco;
+          text-shadow: -2px 1px 0px #00000080;
+          padding-right: 20px;
+          text-align: justify;
+          line-height: 17px;
+        }
+      }
+      .textTitle03 {
+        width: 400px;
+        position: absolute;
+        top: 5%;
+        left: 7%;
+        line-height: 50px;
+        font-size: 50px;
+        p {
+          color: $blanco;
+          text-shadow: -3px 3px 1px #00000080;
+        }
+      }
+      .text03 {
         max-width: 50%;
         position: absolute;
         bottom: 10%;
@@ -104,8 +154,8 @@
           height: 100%;
           object-fit: cover;
         }
-        .textTitle {
-          width: 100%;
+        .textTitle01 {
+          width: 90%;
           position: absolute;
           top: 5%;
           left: 5%;
@@ -116,7 +166,57 @@
             text-shadow: -3px 3px 1px #00000080;
           }
         }
-        .text {
+        .text01 {
+          max-width: 90%;
+          position: absolute;
+          bottom: 5%;
+          left: 5%;
+          p {
+            color: $blanco;
+            text-shadow: -2px 1px 0px #00000080;
+            padding-right: 20px;
+            text-align: justify;
+            line-height: 20px;
+          }
+        }
+        .textTitle02 {
+          width: 90%;
+          position: absolute;
+          top: 5%;
+          left: 7%;
+          line-height: 50px;
+          font-size: 50px;
+          p {
+            color: $blanco;
+            text-shadow: -3px 3px 1px #00000080;
+          }
+        }
+        .text02 {
+          max-width: 100%;
+          position: absolute;
+          bottom: 5%;
+          left: 5%;
+          p {
+            color: $blanco;
+            text-shadow: -2px 1px 0px #00000080;
+            padding-right: 20px;
+            text-align: justify;
+            line-height: 20px;
+          }
+        }
+        .textTitle03 {
+          width: 90%;
+          position: absolute;
+          top: 5%;
+          left: 7%;
+          line-height: 50px;
+          font-size: 50px;
+          p {
+            color: $blanco;
+            text-shadow: -3px 3px 1px #00000080;
+          }
+        }
+        .text03 {
           max-width: 100%;
           position: absolute;
           bottom: 5%;
