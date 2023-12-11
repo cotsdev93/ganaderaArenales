@@ -45,7 +45,7 @@ function openPopup() {
     blureado.classList.add("blur");
   }, 7000);
 }
-openPopup();
+// openPopup();
 
 buttonx.addEventListener("click", () => {
   popup.classList.remove("top");
@@ -62,7 +62,7 @@ btnRight.addEventListener("click", (e) => moveToRight());
 setTimeout(() => {
   setInterval(() => {
   moveToRight();
-}, 5000);
+}, 7000);
 }, 12000);
 
 let operacion = 0;
