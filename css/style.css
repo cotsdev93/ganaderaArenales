@@ -935,6 +935,84 @@ body main .copyR p {
     background-color: #a3a3a3;
   }
 }
+@media screen and (max-width: 400px) {
+  .form {
+    width: 100%;
+    height: 85vh;
+    display: block;
+    position: relative;
+    overflow: hidden;
+  }
+  .form img {
+    position: absolute;
+    width: 420px;
+    right: -150px;
+    top: 150px;
+    z-index: -1;
+    opacity: 20%;
+  }
+  .form .hablemos {
+    width: 100%;
+    padding: 0px 20px 20px 20px;
+  }
+  .form .hablemos span {
+    font-size: 25px;
+    color: #707070;
+  }
+  .form .hablemos p {
+    margin-top: 10px;
+    line-height: 18px;
+    color: #a3a3a3;
+  }
+  .form .formInputs {
+    width: 100%;
+    padding: 0px 20px 30px 20px;
+  }
+  .form .formInputs form {
+    padding-top: 0px;
+  }
+  .form .formInputs form .input {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+    justify-content: center;
+  }
+  .form .formInputs form .input label {
+    width: 100%;
+    color: #707070;
+    padding: 8px 0px 0px 0px;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  .form .formInputs form .input input {
+    width: 100%;
+    height: 15px;
+    background-color: #f7f9f9;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    height: 30px;
+    box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.062745098);
+  }
+  .form .formInputs form .buttonContainer {
+    padding: 12px 0px 0px 0px;
+    text-align: right;
+  }
+  .form .formInputs form .buttonContainer button {
+    border: none;
+    background-color: #d1d1d1;
+    border-radius: 3px;
+    width: 50%;
+    height: 25px;
+    cursor: pointer;
+    color: #ebebeb;
+    transition: 1s;
+    outline: none;
+  }
+  .form .formInputs form .buttonContainer button:hover {
+    background-color: #a3a3a3;
+  }
+}
 .higiene {
   width: 100%;
   height: 200vh;
@@ -1016,6 +1094,86 @@ body main .copyR p {
     width: 100%;
     height: 135vh;
     padding: 0px 0px 30px 0px;
+    overflow: hidden;
+  }
+  .higiene h3 {
+    color: #707070;
+    font-size: 30px;
+    padding: 15px;
+  }
+  .higiene .imgContainer {
+    width: 100%;
+    position: relative;
+    margin: 0px;
+  }
+  .higiene .imgContainer img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    object-position: 20% 30%;
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1254901961);
+  }
+  .higiene .imgContainer h4 {
+    text-align: center;
+    color: #fffef4;
+    text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.5019607843);
+    padding: 15px;
+    font-size: 24px;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+  }
+  .higiene .higieneInfo {
+    width: 100%;
+    display: inline-block;
+    justify-content: space-around;
+  }
+  .higiene .higieneInfo .info {
+    width: 90%;
+    height: 100%;
+    margin: 20px;
+  }
+  .higiene .higieneInfo .info h5 {
+    color: #a3a3a3;
+    font-size: 18px;
+  }
+  .higiene .higieneInfo .info p {
+    color: #727272;
+    font-size: 14px;
+    text-align: justify;
+  }
+  .higiene .imgContainer02 {
+    width: 100%;
+    position: relative;
+    margin: 0px;
+  }
+  .higiene .imgContainer02 img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    object-position: 0% 40%;
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1254901961);
+  }
+  .higiene .imgContainer02 h4 {
+    text-align: center;
+    color: #fffef4;
+    text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.5019607843);
+    padding: px;
+    font-size: 28px;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .higiene {
+    width: 100%;
+    height: 190vh;
+    padding: 0px 0px 0px 0px;
     overflow: hidden;
   }
   .higiene h3 {
