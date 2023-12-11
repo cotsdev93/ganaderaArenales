@@ -1,4 +1,4 @@
-AOS.init()
+AOS.init();
 
 let intro = document.querySelector(".intro");
 let logo = document.querySelector(".logoHeader");
@@ -61,8 +61,8 @@ btnRight.addEventListener("click", (e) => moveToRight());
 
 setTimeout(() => {
   setInterval(() => {
-  moveToRight();
-}, 7000);
+    moveToRight();
+  }, 7000);
 }, 12000);
 
 let operacion = 0;
@@ -230,15 +230,28 @@ function initMap() {
 }
 initMap();
 
-const form = document.querySelector(".form")
-const input = document.querySelectorAll("input")
-form.addEventListener("submit", function(e){
-  e.preventDefault()
-  vaciarCampos()
-})
+const form = document.querySelector(".form");
+const input = document.querySelectorAll("input");
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  vaciarCampos();
+});
 
 function vaciarCampos() {
-  input.forEach(function(e){
-    e.value = ""
-  })
+  input.forEach(function (e) {
+    e.value = "";
+  });
 }
+
+// const elementosnfo = document.querySelectorAll(".info");
+
+// if (window.innerWidth <= 737) {
+//   const elementosInfo = document.querySelectorAll('.info');
+//   elementosInfo.forEach((elemento) => {
+//     elemento.setAttribute('data-aos', 'fade-up');
+//   });
+
+//   // Refrescar AOS para aplicar las nuevas animaciones
+//   AOS.refresh();
+// }
+
