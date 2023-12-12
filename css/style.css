@@ -1015,7 +1015,7 @@ body main .copyR p {
 }
 .higiene {
   width: 100%;
-  height: 200vh;
+  height: 280vh;
   padding: 0px 20px 30px 20px;
   overflow: hidden;
 }
@@ -1023,19 +1023,19 @@ body main .copyR p {
   color: #707070;
   font-size: 30px;
 }
-.higiene .imgContainer {
+.higiene .imgContainer01 {
   width: 100%;
   position: relative;
   margin: 10px;
 }
-.higiene .imgContainer img {
+.higiene .imgContainer01 img {
   width: 100%;
   height: 150px;
   object-fit: cover;
   object-position: 20% 30%;
   box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1254901961);
 }
-.higiene .imgContainer h4 {
+.higiene .imgContainer01 h4 {
   text-align: center;
   color: #fffef4;
   text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.5019607843);
@@ -1046,21 +1046,21 @@ body main .copyR p {
   left: 50%;
   transform: translate(-50%);
 }
-.higiene .higieneInfo {
+.higiene .higieneInfo01 {
   width: 100%;
   display: flex;
   justify-content: space-around;
 }
-.higiene .higieneInfo .info {
+.higiene .higieneInfo01 .info {
   width: 30%;
   height: 100%;
   margin: 20px;
 }
-.higiene .higieneInfo .info h5 {
+.higiene .higieneInfo01 .info h5 {
   color: #a3a3a3;
   font-size: 18px;
 }
-.higiene .higieneInfo .info p {
+.higiene .higieneInfo01 .info p {
   color: #727272;
   font-size: 14px;
   text-align: justify;
@@ -1074,7 +1074,7 @@ body main .copyR p {
   width: 100%;
   height: 150px;
   object-fit: cover;
-  object-position: 0% 40%;
+  object-position: 0% 65%;
   box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1254901961);
 }
 .higiene .imgContainer02 h4 {
@@ -1088,11 +1088,72 @@ body main .copyR p {
   left: 50%;
   transform: translate(-50%);
 }
+.higiene .higieneInfo02 {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.higiene .higieneInfo02 .info {
+  width: 50%;
+  height: 100%;
+  margin: 20px;
+}
+.higiene .higieneInfo02 .info h5 {
+  color: #a3a3a3;
+  font-size: 18px;
+}
+.higiene .higieneInfo02 .info p {
+  color: #727272;
+  font-size: 14px;
+  text-align: justify;
+}
+.higiene .imgContainer03 {
+  width: 100%;
+  position: relative;
+  margin: 10px;
+}
+.higiene .imgContainer03 img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  object-position: 0% 40%;
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1254901961);
+}
+.higiene .imgContainer03 h4 {
+  text-align: center;
+  color: #fffef4;
+  text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.5019607843);
+  padding: 15px;
+  font-size: 28px;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.higiene .higieneInfo03 {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.higiene .higieneInfo03 .info {
+  width: 30%;
+  height: 100%;
+  margin: 20px;
+}
+.higiene .higieneInfo03 .info h5 {
+  color: #a3a3a3;
+  font-size: 18px;
+}
+.higiene .higieneInfo03 .info p {
+  color: #727272;
+  font-size: 14px;
+  text-align: justify;
+}
 
 @media (max-width: 737px) {
   .higiene {
     width: 100%;
-    height: 135vh;
+    height: 200vh;
     padding: 0px 0px 30px 0px;
     overflow: hidden;
   }
@@ -1101,19 +1162,19 @@ body main .copyR p {
     font-size: 30px;
     padding: 15px;
   }
-  .higiene .imgContainer {
+  .higiene .imgContainer01 {
     width: 100%;
     position: relative;
     margin: 0px;
   }
-  .higiene .imgContainer img {
+  .higiene .imgContainer01 img {
     width: 100%;
     height: 150px;
     object-fit: cover;
     object-position: 20% 30%;
     box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1254901961);
   }
-  .higiene .imgContainer h4 {
+  .higiene .imgContainer01 h4 {
     text-align: center;
     color: #fffef4;
     text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.5019607843);
@@ -1125,21 +1186,21 @@ body main .copyR p {
     transform: translate(-50%);
     width: 100%;
   }
-  .higiene .higieneInfo {
+  .higiene .higieneInfo01 {
     width: 100%;
     display: inline-block;
     justify-content: space-around;
   }
-  .higiene .higieneInfo .info {
+  .higiene .higieneInfo01 .info {
     width: 90%;
     height: 100%;
     margin: 20px;
   }
-  .higiene .higieneInfo .info h5 {
+  .higiene .higieneInfo01 .info h5 {
     color: #a3a3a3;
     font-size: 18px;
   }
-  .higiene .higieneInfo .info p {
+  .higiene .higieneInfo01 .info p {
     color: #727272;
     font-size: 14px;
     text-align: justify;
@@ -1153,47 +1214,10 @@ body main .copyR p {
     width: 100%;
     height: 150px;
     object-fit: cover;
-    object-position: 0% 40%;
+    object-position: 0% 80%;
     box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1254901961);
   }
   .higiene .imgContainer02 h4 {
-    text-align: center;
-    color: #fffef4;
-    text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.5019607843);
-    padding: px;
-    font-size: 28px;
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translate(-50%);
-    width: 100%;
-  }
-}
-@media screen and (max-width: 400px) {
-  .higiene {
-    width: 100%;
-    height: 190vh;
-    padding: 0px 0px 0px 0px;
-    overflow: hidden;
-  }
-  .higiene h3 {
-    color: #707070;
-    font-size: 30px;
-    padding: 15px;
-  }
-  .higiene .imgContainer {
-    width: 100%;
-    position: relative;
-    margin: 0px;
-  }
-  .higiene .imgContainer img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    object-position: 20% 30%;
-    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1254901961);
-  }
-  .higiene .imgContainer h4 {
     text-align: center;
     color: #fffef4;
     text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.5019607843);
@@ -1205,38 +1229,38 @@ body main .copyR p {
     transform: translate(-50%);
     width: 100%;
   }
-  .higiene .higieneInfo {
+  .higiene .higieneInfo02 {
     width: 100%;
     display: inline-block;
     justify-content: space-around;
   }
-  .higiene .higieneInfo .info {
+  .higiene .higieneInfo02 .info {
     width: 90%;
     height: 100%;
     margin: 20px;
   }
-  .higiene .higieneInfo .info h5 {
+  .higiene .higieneInfo02 .info h5 {
     color: #a3a3a3;
     font-size: 18px;
   }
-  .higiene .higieneInfo .info p {
+  .higiene .higieneInfo02 .info p {
     color: #727272;
     font-size: 14px;
     text-align: justify;
   }
-  .higiene .imgContainer02 {
+  .higiene .imgContainer03 {
     width: 100%;
     position: relative;
     margin: 0px;
   }
-  .higiene .imgContainer02 img {
+  .higiene .imgContainer03 img {
     width: 100%;
     height: 150px;
     object-fit: cover;
     object-position: 0% 40%;
     box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1254901961);
   }
-  .higiene .imgContainer02 h4 {
+  .higiene .imgContainer03 h4 {
     text-align: center;
     color: #fffef4;
     text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.5019607843);
@@ -1247,6 +1271,25 @@ body main .copyR p {
     left: 50%;
     transform: translate(-50%);
     width: 100%;
+  }
+  .higiene .higieneInfo03 {
+    width: 100%;
+    display: inline-block;
+    justify-content: space-around;
+  }
+  .higiene .higieneInfo03 .info {
+    width: 90%;
+    height: 100%;
+    margin: 20px;
+  }
+  .higiene .higieneInfo03 .info h5 {
+    color: #a3a3a3;
+    font-size: 18px;
+  }
+  .higiene .higieneInfo03 .info p {
+    color: #727272;
+    font-size: 14px;
+    text-align: justify;
   }
 }
 

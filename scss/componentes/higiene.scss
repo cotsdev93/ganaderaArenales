@@ -1,16 +1,16 @@
 .higiene {
   width: 100%;
-  height: 200vh;
+  height: 280vh;
   padding: 0px 20px 30px 20px;
   overflow: hidden;
   h3 {
     color: $grisMasOscuro;
     font-size: 30px;
   }
-  .imgContainer {
+  .imgContainer01 {
     width: 100%;
     position: relative;
-    margin:10px;
+    margin: 10px;
     img {
       width: 100%;
       height: 150px;
@@ -24,22 +24,21 @@
       text-shadow: -2px 2px 1px #00000080;
       padding: 15px;
       font-size: 28px;
-      position:absolute;
-      bottom:-10px;
+      position: absolute;
+      bottom: -10px;
       left: 50%;
-      transform: translate(-50%)
-
+      transform: translate(-50%);
     }
   }
 
-  .higieneInfo {
+  .higieneInfo01 {
     width: 100%;
     display: flex;
     justify-content: space-around;
     .info {
       width: 30%;
       height: 100%;
-      margin:20px;
+      margin: 20px;
       h5 {
         color: $grisOscuro;
         font-size: 18px;
@@ -51,11 +50,52 @@
       }
     }
   }
-
-  .imgContainer02{
+  .imgContainer02 {
     width: 100%;
     position: relative;
-    margin:10px;
+    margin: 10px;
+    img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      object-position: 0% 65%;
+      box-shadow: $shadow;
+    }
+    h4 {
+      text-align: center;
+      color: $blanquito;
+      text-shadow: -2px 2px 1px #00000080;
+      padding: 15px;
+      font-size: 28px;
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translate(-50%);
+    }
+  }
+  .higieneInfo02 {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    .info {
+      width: 50%;
+      height: 100%;
+      margin: 20px;
+      h5 {
+        color: $grisOscuro;
+        font-size: 18px;
+      }
+      p {
+        color: $gris;
+        font-size: 14px;
+        text-align: justify;
+      }
+    }
+  }
+  .imgContainer03 {
+    width: 100%;
+    position: relative;
+    margin: 10px;
     img {
       width: 100%;
       height: 150px;
@@ -69,180 +109,172 @@
       text-shadow: -2px 2px 1px #00000080;
       padding: 15px;
       font-size: 28px;
-      position:absolute;
-      bottom:-10px;
+      position: absolute;
+      bottom: -10px;
       left: 50%;
-      transform: translate(-50%)
-
+      transform: translate(-50%);
+    }
+  }
+  .higieneInfo03 {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    .info {
+      width: 30%;
+      height: 100%;
+      margin: 20px;
+      h5 {
+        color: $grisOscuro;
+        font-size: 18px;
+      }
+      p {
+        color: $gris;
+        font-size: 14px;
+        text-align: justify;
+      }
     }
   }
 }
-
-
 
 @media (max-width: 737px) {
   .higiene {
-  width: 100%;
-  height: 135vh;
-  padding: 0px 0px 30px 0px;
-  overflow: hidden;
-  h3 {
-    color: $grisMasOscuro;
-    font-size: 30px;
-    padding:15px
-  }
-  .imgContainer {
     width: 100%;
-    position: relative;
-    margin:0px;
-    img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-      object-position: 20% 30%;
-      box-shadow: $shadow;
-    }
-    h4 {
-      text-align: center;
-      color: $blanquito;
-      text-shadow: -2px 2px 1px #00000080;
+    height: 200vh;
+    padding: 0px 0px 30px 0px;
+    overflow: hidden;
+    h3 {
+      color: $grisMasOscuro;
+      font-size: 30px;
       padding: 15px;
-      font-size: 24px;
-      position:absolute;
-      bottom:-10px;
-      left: 50%;
-      transform: translate(-50%);
-      width: 100%;
     }
-  }
-
-  .higieneInfo {
-    width: 100%;
-    display: inline-block;
-    justify-content: space-around;
-    .info {
-      width: 90%;
-      height: 100%;
-      margin:20px;
-      h5 {
-        color: $grisOscuro;
-        font-size: 18px;
+    .imgContainer01 {
+      width: 100%;
+      position: relative;
+      margin: 0px;
+      img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        object-position: 20% 30%;
+        box-shadow: $shadow;
       }
-      p {
-        color: $gris;
-        font-size: 14px;
-        text-align: justify;
+      h4 {
+        text-align: center;
+        color: $blanquito;
+        text-shadow: -2px 2px 1px #00000080;
+        padding: 15px;
+        font-size: 24px;
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translate(-50%);
+        width: 100%;
       }
     }
-  }
-
-  .imgContainer02{
-    width: 100%;
-    position: relative;
-    margin:0px;
-    img {
+    .higieneInfo01 {
       width: 100%;
-      height: 150px;
-      object-fit: cover;
-      object-position: 0% 40%;
-      box-shadow: $shadow;
-    }
-    h4 {
-      text-align: center;
-      color: $blanquito;
-      text-shadow: -2px 2px 1px #00000080;
-      padding: px;
-      font-size: 28px;
-      position:absolute;
-      bottom:-10px;
-      left: 50%;
-      transform: translate(-50%);
-      width: 100%;
-    }
-  }
-}
-}
-
-@media screen and (max-width: 400px) {
-  .higiene {
-  width: 100%;
-  height: 190vh;
-  padding: 0px 0px 0px 0px;
-  overflow: hidden;
-
-  h3 {
-    color: $grisMasOscuro;
-    font-size: 30px;
-    padding:15px
-  }
-  .imgContainer {
-    width: 100%;
-    position: relative;
-    margin:0px;
-    img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-      object-position: 20% 30%;
-      box-shadow: $shadow;
-    }
-    h4 {
-      text-align: center;
-      color: $blanquito;
-      text-shadow: -2px 2px 1px #00000080;
-      padding: 15px;
-      font-size: 24px;
-      position:absolute;
-      bottom:-10px;
-      left: 50%;
-      transform: translate(-50%);
-      width: 100%;
-    }
-  }
-
-  .higieneInfo {
-    width: 100%;
-    display: inline-block;
-    justify-content: space-around;
-    .info {
-      width: 90%;
-      height: 100%;
-      margin:20px;
-      h5 {
-        color: $grisOscuro;
-        font-size: 18px;
-      }
-      p {
-        color: $gris;
-        font-size: 14px;
-        text-align: justify;
+      display: inline-block;
+      justify-content: space-around;
+      .info {
+        width: 90%;
+        height: 100%;
+        margin: 20px;
+        h5 {
+          color: $grisOscuro;
+          font-size: 18px;
+        }
+        p {
+          color: $gris;
+          font-size: 14px;
+          text-align: justify;
+        }
       }
     }
-  }
-
-  .imgContainer02{
-    width: 100%;
-    position: relative;
-    margin:0px;
-    img {
+    .imgContainer02 {
       width: 100%;
-      height: 150px;
-      object-fit: cover;
-      object-position: 0% 40%;
-      box-shadow: $shadow;
+      position: relative;
+      margin: 0px;
+      img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        object-position: 0% 80%;
+        box-shadow: $shadow;
+      }
+      h4 {
+        text-align: center;
+        color: $blanquito;
+        text-shadow: -2px 2px 1px #00000080;
+        padding: 15px;
+        font-size: 24px;
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translate(-50%);
+        width: 100%;
+      }
     }
-    h4 {
-      text-align: center;
-      color: $blanquito;
-      text-shadow: -2px 2px 1px #00000080;
-      padding: px;
-      font-size: 28px;
-      position:absolute;
-      bottom:-10px;
-      left: 50%;
-      transform: translate(-50%);
+    .higieneInfo02 {
       width: 100%;
+      display: inline-block;
+      justify-content: space-around;
+      .info {
+        width: 90%;
+        height: 100%;
+        margin: 20px;
+        h5 {
+          color: $grisOscuro;
+          font-size: 18px;
+        }
+        p {
+          color: $gris;
+          font-size: 14px;
+          text-align: justify;
+        }
+      }
+    }
+    .imgContainer03 {
+      width: 100%;
+      position: relative;
+      margin: 0px;
+      img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        object-position: 0% 40%;
+        box-shadow: $shadow;
+      }
+      h4 {
+        text-align: center;
+        color: $blanquito;
+        text-shadow: -2px 2px 1px #00000080;
+        padding: px;
+        font-size: 28px;
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translate(-50%);
+        width: 100%;
+      }
+    }
+    .higieneInfo03 {
+      width: 100%;
+      display: inline-block;
+      justify-content: space-around;
+      .info {
+        width: 90%;
+        height: 100%;
+        margin: 20px;
+        h5 {
+          color: $grisOscuro;
+          font-size: 18px;
+        }
+        p {
+          color: $gris;
+          font-size: 14px;
+          text-align: justify;
+        }
+      }
     }
   }
-}
 }
