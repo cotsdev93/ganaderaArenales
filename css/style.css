@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   text-decoration: none;
   list-style: none;
@@ -256,19 +257,20 @@ body .popupContainer .popup .logoPopup img {
   width: 50px;
 }
 body .popupContainer .popup button {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   position: absolute;
-  right: -20px;
-  top: -20px;
+  right: -35px;
+  top: -35px;
   color: #f7f9f9;
   cursor: pointer;
-  border: none;
+  border: solid 0.5px #a3a3a3;
   background-color: #d1d1d1;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 12px;
 }
 body .top {
   top: 30px;
@@ -1015,7 +1017,7 @@ body main .copyR p {
 }
 .higiene {
   width: 100%;
-  height: 280vh;
+  height: 273vh;
   padding: 0px 20px 30px 20px;
   overflow: hidden;
 }
@@ -1291,6 +1293,55 @@ body main .copyR p {
     font-size: 14px;
     text-align: justify;
   }
+}
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+.productos {
+  width: 100%;
+  height: 330px;
+  padding: 0px 20px 30px 20px;
+}
+.productos h3 {
+  color: #707070;
+  font-size: 30px;
+}
+.productos .productosContainer {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px;
+}
+.productos .productosContainer .productoContainer {
+  width: 180px;
+  height: 180px;
+  border-radius: 100%;
+  background-color: #d1d1d1;
+  position: relative;
+}
+.productos .productosContainer .productoContainer img {
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 1s ease-in-out; /* Transición suave */
+}
+.productos .productosContainer .productoContainer:hover img {
+  animation: pulse 1.2s infinite;
+}
+.productos .productosContainer .productoContainer p {
+  position: absolute;
+  top: 195px;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /*# sourceMappingURL=style.css.map */

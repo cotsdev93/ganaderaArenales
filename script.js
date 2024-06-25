@@ -233,13 +233,32 @@ initMap();
 const form = document.querySelector(".form");
 const input = document.querySelectorAll("input");
 form.addEventListener("submit", function (e) {
-  e.preventDefault();
-  vaciarCampos();
+  // como se hace settimeout?
+  setTimeout(vaciarCampos(), 3000);
 });
 
 function vaciarCampos() {
-  input.forEach(function (e) {
-    e.value = "";
-  });
+  setTimeout(() => {
+    input.forEach(function (e) {
+      e.value = "";
+    });
+  }, 2000);
 }
 
+document.querySelector("form").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  // Envío del formulario utilizando fetch
+  fetch("https://formsubmit.co/cotsdev93@gmail.com", {
+    method: "POST",
+    body: new FormData(this),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("Success:", data);
+      // Aquí puedes manejar la respuesta del servidor
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+});
