@@ -1294,17 +1294,6 @@ body main .copyR p {
     text-align: justify;
   }
 }
-@keyframes pulse {
-  0% {
-    transform: translate(-50%, -50%) scale(1);
-  }
-  50% {
-    transform: translate(-50%, -50%) scale(1.1);
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(1);
-  }
-}
 .productos {
   width: 100%;
   height: 330px;
@@ -1335,11 +1324,16 @@ body main .copyR p {
   transition: transform 1s ease-in-out; /* Transición suave */
 }
 .productos .productosContainer .productoContainer:hover img {
-  animation: pulse 1.2s infinite;
+  transform: translate(-50%, -50%) scale(1.3);
+}
+.productos .productosContainer .productoContainer:hover p {
+  color: #a3a3a3;
 }
 .productos .productosContainer .productoContainer p {
+  transition: color 0.5s;
+  color: #d1d1d1;
   position: absolute;
-  top: 195px;
+  top: 198px;
   left: 50%;
   transform: translate(-50%, -50%);
 }

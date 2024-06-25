@@ -1,17 +1,3 @@
-// Define the keyframes at the top of your SCSS file
-@keyframes pulse {
-  0% {
-    transform: translate(-50%, -50%) scale(1);
-  }
-  50% {
-    transform: translate(-50%, -50%) scale(1.1);
-  }
-
-  100% {
-    transform: translate(-50%, -50%) scale(1);
-  }
-}
-
 .productos {
   width: 100%;
   height: 330px;
@@ -39,11 +25,17 @@
         transition: transform 1s ease-in-out; /* Transición suave */
       }
       &:hover img {
-        animation: pulse 1.2s infinite;
+        // animation: pulse 1.2s infinite;
+        transform: translate(-50%, -50%) scale(1.3);
+      }
+      &:hover p {
+        color:$grisOscuro;
       }
       p {
+        transition: color 0.5s;
+        color: $grisClaro;
         position:absolute;
-        top: 195px;
+        top: 198px;
         left: 50%;
         transform: translate(-50%, -50%);
       }
