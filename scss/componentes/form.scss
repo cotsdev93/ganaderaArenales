@@ -1,6 +1,6 @@
 .form {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   position: relative;
   overflow: hidden;
@@ -73,93 +73,14 @@
 @media (max-width: 737px) {
   .form {
     width: 100%;
-    height: 65vh;
+    height: 100%;
+    // margin-bottom: 10px;
     display: block;
     position: relative;
     overflow: hidden;
     img {
       position: absolute;
-      width: 420px;
-      right: -150px;
-      top: 150px;
-      z-index: -1;
-      opacity: 20%;
-    }
-    .hablemos {
-      width: 100%;
-      padding: 0px 20px 20px 20px;
-      span {
-        font-size: 25px;
-        color: $grisMasOscuro;
-      }
-      p {
-        margin-top: 10px;
-        line-height: 18px;
-        color: $grisOscuro;
-      }
-    }
-    .formInputs {
-      width: 100%;
-      padding: 0px 20px 30px 20px;
-      form {
-        padding-top: 0px;
-        .input {
-          display: flex;
-          flex-direction: column;
-          padding-left: 0px;
-          justify-content: center;
-
-          label {
-            width: 100%;
-            color: $grisMasOscuro;
-            padding: 8px 0px 0px 0px;
-            text-transform: uppercase;
-            font-size: 12px;
-          }
-          input {
-            width: 100%;
-            height: 15px;
-            background-color: $blanco;
-            outline: none;
-            border: none;
-            border-radius: 3px;
-            height: 30px;
-            box-shadow: inset 0px 0px 1px 1px #00000010;
-          }
-        }
-        .buttonContainer {
-          padding: 12px 0px 0px 0px;
-          text-align: right;
-          button {
-            border: none;
-            background-color: $grisClaro;
-            border-radius: 3px;
-            width: 50%;
-            height: 25px;
-            cursor: pointer;
-            color: $grisMasClaro;
-            transition: 1s;
-            outline: none;
-            &:hover {
-              background-color: $grisOscuro;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .form {
-    width: 100%;
-    height: 85vh;
-    display: block;
-    position: relative;
-    overflow: hidden;
-    img {
-      position: absolute;
-      width: 420px;
+      width: 410px;
       right: -150px;
       top: 150px;
       z-index: -1;

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   text-decoration: none;
   list-style: none;
@@ -789,7 +788,7 @@ body main .copyR p {
 }
 .form {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   position: relative;
   overflow: hidden;
@@ -862,14 +861,14 @@ body main .copyR p {
 @media (max-width: 737px) {
   .form {
     width: 100%;
-    height: 65vh;
+    height: 100%;
     display: block;
     position: relative;
     overflow: hidden;
   }
   .form img {
     position: absolute;
-    width: 420px;
+    width: 410px;
     right: -150px;
     top: 150px;
     z-index: -1;
@@ -937,107 +936,29 @@ body main .copyR p {
     background-color: #a3a3a3;
   }
 }
-@media screen and (max-width: 400px) {
-  .form {
-    width: 100%;
-    height: 85vh;
-    display: block;
-    position: relative;
-    overflow: hidden;
-  }
-  .form img {
-    position: absolute;
-    width: 420px;
-    right: -150px;
-    top: 150px;
-    z-index: -1;
-    opacity: 20%;
-  }
-  .form .hablemos {
-    width: 100%;
-    padding: 0px 20px 20px 20px;
-  }
-  .form .hablemos span {
-    font-size: 25px;
-    color: #707070;
-  }
-  .form .hablemos p {
-    margin-top: 10px;
-    line-height: 18px;
-    color: #a3a3a3;
-  }
-  .form .formInputs {
-    width: 100%;
-    padding: 0px 20px 30px 20px;
-  }
-  .form .formInputs form {
-    padding-top: 0px;
-  }
-  .form .formInputs form .input {
-    display: flex;
-    flex-direction: column;
-    padding-left: 0px;
-    justify-content: center;
-  }
-  .form .formInputs form .input label {
-    width: 100%;
-    color: #707070;
-    padding: 8px 0px 0px 0px;
-    text-transform: uppercase;
-    font-size: 12px;
-  }
-  .form .formInputs form .input input {
-    width: 100%;
-    height: 15px;
-    background-color: #f7f9f9;
-    outline: none;
-    border: none;
-    border-radius: 3px;
-    height: 30px;
-    box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.062745098);
-  }
-  .form .formInputs form .buttonContainer {
-    padding: 12px 0px 0px 0px;
-    text-align: right;
-  }
-  .form .formInputs form .buttonContainer button {
-    border: none;
-    background-color: #d1d1d1;
-    border-radius: 3px;
-    width: 50%;
-    height: 25px;
-    cursor: pointer;
-    color: #ebebeb;
-    transition: 1s;
-    outline: none;
-  }
-  .form .formInputs form .buttonContainer button:hover {
-    background-color: #a3a3a3;
-  }
-}
-.higiene {
+.sobreNosotros {
   width: 100%;
-  height: 273vh;
+  height: 100%;
   padding: 0px 20px 30px 20px;
   overflow: hidden;
 }
-.higiene h3 {
+.sobreNosotros h3 {
   color: #707070;
   font-size: 30px;
 }
-.higiene .imgContainer01 {
+.sobreNosotros .imgContainer01 {
   width: 100%;
   position: relative;
   margin: 10px;
 }
-.higiene .imgContainer01 img {
+.sobreNosotros .imgContainer01 img {
   width: 100%;
   height: 150px;
   object-fit: cover;
   object-position: 20% 30%;
   box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1254901961);
 }
-.higiene .imgContainer01 h4 {
+.sobreNosotros .imgContainer01 h4 {
   text-align: center;
   color: #fffef4;
   text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.5019607843);
@@ -1048,38 +969,38 @@ body main .copyR p {
   left: 50%;
   transform: translate(-50%);
 }
-.higiene .higieneInfo01 {
+.sobreNosotros .higieneInfo01 {
   width: 100%;
   display: flex;
   justify-content: space-around;
 }
-.higiene .higieneInfo01 .info {
+.sobreNosotros .higieneInfo01 .info {
   width: 30%;
   height: 100%;
   margin: 20px;
 }
-.higiene .higieneInfo01 .info h5 {
+.sobreNosotros .higieneInfo01 .info h5 {
   color: #a3a3a3;
   font-size: 18px;
 }
-.higiene .higieneInfo01 .info p {
+.sobreNosotros .higieneInfo01 .info p {
   color: #727272;
   font-size: 14px;
   text-align: justify;
 }
-.higiene .imgContainer02 {
+.sobreNosotros .imgContainer02 {
   width: 100%;
   position: relative;
   margin: 10px;
 }
-.higiene .imgContainer02 img {
+.sobreNosotros .imgContainer02 img {
   width: 100%;
   height: 150px;
   object-fit: cover;
   object-position: 0% 65%;
   box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1254901961);
 }
-.higiene .imgContainer02 h4 {
+.sobreNosotros .imgContainer02 h4 {
   text-align: center;
   color: #fffef4;
   text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.5019607843);
@@ -1090,38 +1011,38 @@ body main .copyR p {
   left: 50%;
   transform: translate(-50%);
 }
-.higiene .higieneInfo02 {
+.sobreNosotros .higieneInfo02 {
   width: 100%;
   display: flex;
   justify-content: space-around;
 }
-.higiene .higieneInfo02 .info {
+.sobreNosotros .higieneInfo02 .info {
   width: 50%;
   height: 100%;
   margin: 20px;
 }
-.higiene .higieneInfo02 .info h5 {
+.sobreNosotros .higieneInfo02 .info h5 {
   color: #a3a3a3;
   font-size: 18px;
 }
-.higiene .higieneInfo02 .info p {
+.sobreNosotros .higieneInfo02 .info p {
   color: #727272;
   font-size: 14px;
   text-align: justify;
 }
-.higiene .imgContainer03 {
+.sobreNosotros .imgContainer03 {
   width: 100%;
   position: relative;
   margin: 10px;
 }
-.higiene .imgContainer03 img {
+.sobreNosotros .imgContainer03 img {
   width: 100%;
   height: 150px;
   object-fit: cover;
   object-position: 0% 40%;
   box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1254901961);
 }
-.higiene .imgContainer03 h4 {
+.sobreNosotros .imgContainer03 h4 {
   text-align: center;
   color: #fffef4;
   text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.5019607843);
@@ -1132,51 +1053,48 @@ body main .copyR p {
   left: 50%;
   transform: translate(-50%);
 }
-.higiene .higieneInfo03 {
+.sobreNosotros .higieneInfo03 {
   width: 100%;
   display: flex;
   justify-content: space-around;
 }
-.higiene .higieneInfo03 .info {
+.sobreNosotros .higieneInfo03 .info {
   width: 30%;
   height: 100%;
   margin: 20px;
 }
-.higiene .higieneInfo03 .info h5 {
+.sobreNosotros .higieneInfo03 .info h5 {
   color: #a3a3a3;
   font-size: 18px;
 }
-.higiene .higieneInfo03 .info p {
+.sobreNosotros .higieneInfo03 .info p {
   color: #727272;
   font-size: 14px;
   text-align: justify;
 }
 
 @media (max-width: 737px) {
-  .higiene {
+  .sobreNosotros {
     width: 100%;
-    height: 200vh;
-    padding: 0px 0px 30px 0px;
-    overflow: hidden;
+    height: 100%;
+    padding: 0px;
   }
-  .higiene h3 {
-    color: #707070;
-    font-size: 30px;
+  .sobreNosotros h3 {
     padding: 15px;
   }
-  .higiene .imgContainer01 {
+  .sobreNosotros .imgContainer01 {
     width: 100%;
     position: relative;
     margin: 0px;
   }
-  .higiene .imgContainer01 img {
+  .sobreNosotros .imgContainer01 img {
     width: 100%;
     height: 150px;
     object-fit: cover;
     object-position: 20% 30%;
     box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1254901961);
   }
-  .higiene .imgContainer01 h4 {
+  .sobreNosotros .imgContainer01 h4 {
     text-align: center;
     color: #fffef4;
     text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.5019607843);
@@ -1188,38 +1106,38 @@ body main .copyR p {
     transform: translate(-50%);
     width: 100%;
   }
-  .higiene .higieneInfo01 {
+  .sobreNosotros .higieneInfo01 {
     width: 100%;
     display: inline-block;
     justify-content: space-around;
   }
-  .higiene .higieneInfo01 .info {
+  .sobreNosotros .higieneInfo01 .info {
     width: 90%;
     height: 100%;
     margin: 20px;
   }
-  .higiene .higieneInfo01 .info h5 {
+  .sobreNosotros .higieneInfo01 .info h5 {
     color: #a3a3a3;
     font-size: 18px;
   }
-  .higiene .higieneInfo01 .info p {
+  .sobreNosotros .higieneInfo01 .info p {
     color: #727272;
     font-size: 14px;
     text-align: justify;
   }
-  .higiene .imgContainer02 {
+  .sobreNosotros .imgContainer02 {
     width: 100%;
     position: relative;
     margin: 0px;
   }
-  .higiene .imgContainer02 img {
+  .sobreNosotros .imgContainer02 img {
     width: 100%;
     height: 150px;
     object-fit: cover;
     object-position: 0% 80%;
     box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1254901961);
   }
-  .higiene .imgContainer02 h4 {
+  .sobreNosotros .imgContainer02 h4 {
     text-align: center;
     color: #fffef4;
     text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.5019607843);
@@ -1231,38 +1149,38 @@ body main .copyR p {
     transform: translate(-50%);
     width: 100%;
   }
-  .higiene .higieneInfo02 {
+  .sobreNosotros .higieneInfo02 {
     width: 100%;
     display: inline-block;
     justify-content: space-around;
   }
-  .higiene .higieneInfo02 .info {
+  .sobreNosotros .higieneInfo02 .info {
     width: 90%;
     height: 100%;
     margin: 20px;
   }
-  .higiene .higieneInfo02 .info h5 {
+  .sobreNosotros .higieneInfo02 .info h5 {
     color: #a3a3a3;
     font-size: 18px;
   }
-  .higiene .higieneInfo02 .info p {
+  .sobreNosotros .higieneInfo02 .info p {
     color: #727272;
     font-size: 14px;
     text-align: justify;
   }
-  .higiene .imgContainer03 {
+  .sobreNosotros .imgContainer03 {
     width: 100%;
     position: relative;
     margin: 0px;
   }
-  .higiene .imgContainer03 img {
+  .sobreNosotros .imgContainer03 img {
     width: 100%;
     height: 150px;
     object-fit: cover;
     object-position: 0% 40%;
     box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1254901961);
   }
-  .higiene .imgContainer03 h4 {
+  .sobreNosotros .imgContainer03 h4 {
     text-align: center;
     color: #fffef4;
     text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.5019607843);
@@ -1274,21 +1192,21 @@ body main .copyR p {
     transform: translate(-50%);
     width: 100%;
   }
-  .higiene .higieneInfo03 {
+  .sobreNosotros .higieneInfo03 {
     width: 100%;
     display: inline-block;
     justify-content: space-around;
   }
-  .higiene .higieneInfo03 .info {
+  .sobreNosotros .higieneInfo03 .info {
     width: 90%;
     height: 100%;
     margin: 20px;
   }
-  .higiene .higieneInfo03 .info h5 {
+  .sobreNosotros .higieneInfo03 .info h5 {
     color: #a3a3a3;
     font-size: 18px;
   }
-  .higiene .higieneInfo03 .info p {
+  .sobreNosotros .higieneInfo03 .info p {
     color: #727272;
     font-size: 14px;
     text-align: justify;
@@ -1321,13 +1239,10 @@ body main .copyR p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: transform 1s ease-in-out; /* Transición suave */
+  transition: transform 0.7s ease-in-out;
 }
 .productos .productosContainer .productoContainer:hover img {
   transform: translate(-50%, -50%) scale(1.3);
-}
-.productos .productosContainer .productoContainer:hover p {
-  color: #a3a3a3;
 }
 .productos .productosContainer .productoContainer p {
   transition: color 0.5s;
@@ -1336,6 +1251,60 @@ body main .copyR p {
   top: 198px;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: 1s ease-in-out;
+}
+.productos .productosContainer .productoContainer:hover p {
+  color: #a3a3a3;
+}
+
+@media (max-width: 737px) {
+  .productos {
+    height: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  .productos h3 {
+    color: #707070;
+    font-size: 30px;
+  }
+  .productos .productosContainer {
+    display: flex;
+    margin: 0px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .productos .productosContainer .productoContainer {
+    width: 135px;
+    height: 135px;
+    border-radius: 100%;
+    background-color: #d1d1d1;
+    position: relative;
+    margin: 20px;
+  }
+  .productos .productosContainer .productoContainer img {
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.7s ease-in-out;
+  }
+  .productos .productosContainer .productoContainer:hover img {
+    transform: translate(-50%, -50%) scale(1.3);
+  }
+  .productos .productosContainer .productoContainer p {
+    transition: color 0.5s;
+    color: #d1d1d1;
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s ease-in-out;
+    white-space: nowrap;
+  }
+  .productos .productosContainer .productoContainer:hover p {
+    color: #a3a3a3;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

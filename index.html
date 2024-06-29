@@ -39,10 +39,12 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <script src="./script.js" defer></script>
+    <!-- LENIS -->
+    <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
   </head>
 
   <body>
-    <!-- <div class="intro">
+    <div class="intro">
       <h1 class="logoHeader">
         <span class="logo">Ganadera</span>
         <img class="logo" src="./assets/img/logoSolo.png" alt="" />
@@ -71,7 +73,7 @@
         </div>
         <button id="x"><i class="fa-regular fa-x"></i></button>
       </div>
-    </div> -->
+    </div>
     <div class="blureado">
       <header>
         <nav>
@@ -81,10 +83,10 @@
             <span translate="no">Arenales</span>
           </div>
           <ul class="navMenu">
-            <li>Products</li>
-            <li>About us</li>
-            <li>Export</li>
-            <li>Contact</li>
+            <a href="#sobreNosotros"> <li>About us</li></a>
+            <a href="#exportacion"><li>Export</li></a>
+            <a href="#form"><li>Contact</li></a>
+            <a href="#productos"><li>Products</li></a>
           </ul>
           <div class="menuContainer">
             <i class="fa-solid fa-bars"></i>
@@ -137,94 +139,7 @@
           <div class="btnLeft"><i class="bx bx-chevron-left"></i></div>
           <div class="btnRight"><i class="bx bx-chevron-right"></i></div>
         </div>
-        <div class="exportacion">
-          <div class="exportacionContainer" data-aos="fade-up">
-            <h3>Paises Clientes</h3>
-            <p>
-              Nos enorgullece compartir que nuestras carnes de alta calidad han
-              llegado a los <strong>cinco continentes</strong>. Desde los vastos
-              campos de nuestras tierras hasta su mesa, llevamos la tradición
-              ganadera a cada rincón del mundo. Descubra el sabor auténtico que
-              trasciende fronteras.
-            </p>
-            <div id="map" data-aos="fade-up"></div>
-          </div>
-        </div>
-        <div class="form">
-          <img src="./assets/img/logoSolo.png" alt="" />
-          <div class="hablemos" data-aos="fade-up">
-            <span>Hablemos...</span>
-            <p>
-              En Ganadera Arenales estamos comprometidos con la excelencia en la
-              exportación de carne de alta calidad. Valoramos tu interés y nos
-              encantaría estar en contacto contigo.
-            </p>
-            <p>
-              Al dejarnos tus datos, nos permitirás mantenerte informado sobre
-              nuestras últimas novedades, productos destacados y oportunidades
-              exclusivas.
-            </p>
-          </div>
-          <div class="formInputs" data-aos="fade-up">
-            <form
-              action="https://formsubmit.co/cotsdev93@gmail.com"
-              method="POST"
-            >
-              <div class="input">
-                <label for="">Nombre Completo</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  class="form-control"
-                  required
-                />
-              </div>
-              <div class="input">
-                <label for="">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  class="form-control"
-                  required
-                />
-              </div>
-              <div class="input">
-                <label for="">Numero Telefono</label>
-                <input
-                  type="text"
-                  id="phone"
-                  name="phone"
-                  class="form-control"
-                  required
-                />
-              </div>
-              <div class="input">
-                <label for="">Empresa</label>
-                <input
-                  type="text"
-                  name="company"
-                  class="form-control"
-                  required
-                />
-              </div>
-              <div class="input">
-                <label for="">Pais</label>
-                <input
-                  type="text"
-                  name="country"
-                  class="form-control"
-                  required
-                />
-              </div>
-              <div class="buttonContainer">
-                <button type="submit">Enviar</button>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="higiene">
+        <div class="sobreNosotros" id="sobreNosotros">
           <h3 data-aos="fade-up">Seguridad e Higiene</h3>
           <div class="imgContainer01" data-aos="fade-up">
             <img src="./assets/img/higiene.jpg" alt="" />
@@ -308,22 +223,130 @@
             </div>
           </div>
         </div>
-        <div class="productos">
+        <div class="exportacion" id="exportacion">
+          <div class="exportacionContainer" data-aos="fade-up">
+            <h3>Paises Clientes</h3>
+            <p>
+              Nos enorgullece compartir que nuestras carnes de alta calidad han
+              llegado a los <strong>cinco continentes</strong>. Desde los vastos
+              campos de nuestras tierras hasta su mesa, llevamos la tradición
+              ganadera a cada rincón del mundo. Descubra el sabor auténtico que
+              trasciende fronteras.
+            </p>
+            <div id="map" data-aos="fade-up"></div>
+          </div>
+        </div>
+        <div class="form" id="form">
+          <img src="./assets/img/logoSolo.png" alt="" />
+          <div class="hablemos" data-aos="fade-up">
+            <span>Hablemos...</span>
+            <p>
+              En Ganadera Arenales estamos comprometidos con la excelencia en la
+              exportación de carne de alta calidad. Valoramos tu interés y nos
+              encantaría estar en contacto contigo.
+            </p>
+            <p>
+              Al dejarnos tus datos, nos permitirás mantenerte informado sobre
+              nuestras últimas novedades, productos destacados y oportunidades
+              exclusivas.
+            </p>
+          </div>
+          <div class="formInputs" data-aos="fade-up">
+            <form
+              action="https://formsubmit.co/cotsdev93@gmail.com"
+              method="POST"
+            >
+              <div class="input">
+                <label for="">Nombre Completo</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="input">
+                <label for="">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="input">
+                <label for="">Numero Telefono</label>
+                <input
+                  type="text"
+                  id="phone"
+                  name="phone"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="input">
+                <label for="">Empresa</label>
+                <input
+                  type="text"
+                  name="company"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="input">
+                <label for="">Pais</label>
+                <input
+                  type="text"
+                  name="country"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="buttonContainer">
+                <button type="submit">Enviar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="productos" id="productos">
           <h3 data-aos="fade-up">Productos Destacados</h3>
           <div class="productosContainer">
-            <div class="productoContainer" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800" >
+            <div
+              class="productoContainer"
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-duration="800"
+            >
               <img src="./assets/img/carne1.png" alt="" />
               <p>Cuadril</p>
             </div>
-            <div class="productoContainer" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" >
+            <div
+              class="productoContainer"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="800"
+            >
               <img src="./assets/img/carne2.png" alt="" />
               <p>Ojo de Bife</p>
             </div>
-            <div class="productoContainer" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800" >
+            <div
+              class="productoContainer"
+              data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-duration="800"
+            >
               <img src="./assets/img/carne3.png" alt="" />
               <p>Bondiola</p>
             </div>
-            <div class="productoContainer" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800" >
+            <div
+              class="productoContainer"
+              data-aos="fade-up"
+              data-aos-delay="400"
+              data-aos-duration="800"
+            >
               <img src="./assets/img/carne4.png" alt="" />
               <p>Nalga</p>
             </div>
