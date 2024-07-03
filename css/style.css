@@ -207,6 +207,10 @@ header nav .menuContainer {
     opacity: 50%;
     color: #a3a3a3;
   }
+  header .irArriba {
+    position: fixed;
+    z-index: 50;
+  }
 }
 body {
   position: relative;
@@ -336,6 +340,7 @@ body .top {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: solid 1px #a3a3a3;
   }
   body .top {
     top: 90px;
@@ -414,6 +419,23 @@ body main:focus, body main:active {
     outline: none;
   }
 }
+body main .irArriba {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s;
+  font-size: 38px;
+  color: #707070;
+}
+body main .mostrar {
+  bottom: 25px;
+  pointer-events: auto;
+  opacity: 1;
+}
 body main footer {
   background-color: #f7f9f9;
   width: 100%;
@@ -474,6 +496,22 @@ body main .copyR p {
 }
 
 @media (max-width: 737px) {
+  body main .irArriba {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 30px;
+    right: 15px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s;
+    font-size: 38px;
+  }
+  body main .mostrar {
+    bottom: 25px;
+    pointer-events: auto;
+    opacity: 1;
+  }
   body main footer {
     background-color: #f7f9f9;
     width: 100%;
@@ -840,6 +878,7 @@ body main .copyR p {
   border: none;
   border-radius: 3px;
   height: 30px;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1254901961);
 }
 .form .formInputs form .buttonContainer {
   padding: 15px 0px 4px 50px;
@@ -865,6 +904,7 @@ body main .copyR p {
     display: block;
     position: relative;
     overflow: hidden;
+    margin-top: 20px;
   }
   .form img {
     position: absolute;
@@ -915,7 +955,7 @@ body main .copyR p {
     border: none;
     border-radius: 3px;
     height: 30px;
-    box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.062745098);
+    box-shadow: 0px 0px 4px 0.5px rgba(0, 0, 0, 0.1254901961);
   }
   .form .formInputs form .buttonContainer {
     padding: 12px 0px 0px 0px;
@@ -980,11 +1020,11 @@ body main .copyR p {
   margin: 20px;
 }
 .sobreNosotros .higieneInfo01 .info h5 {
-  color: #a3a3a3;
+  color: #707070;
   font-size: 18px;
 }
 .sobreNosotros .higieneInfo01 .info p {
-  color: #727272;
+  color: #a3a3a3;
   font-size: 14px;
   text-align: justify;
 }
@@ -1022,11 +1062,11 @@ body main .copyR p {
   margin: 20px;
 }
 .sobreNosotros .higieneInfo02 .info h5 {
-  color: #a3a3a3;
+  color: #707070;
   font-size: 18px;
 }
 .sobreNosotros .higieneInfo02 .info p {
-  color: #727272;
+  color: #a3a3a3;
   font-size: 14px;
   text-align: justify;
 }
@@ -1064,11 +1104,11 @@ body main .copyR p {
   margin: 20px;
 }
 .sobreNosotros .higieneInfo03 .info h5 {
-  color: #a3a3a3;
+  color: #707070;
   font-size: 18px;
 }
 .sobreNosotros .higieneInfo03 .info p {
-  color: #727272;
+  color: #a3a3a3;
   font-size: 14px;
   text-align: justify;
 }
@@ -1117,11 +1157,11 @@ body main .copyR p {
     margin: 20px;
   }
   .sobreNosotros .higieneInfo01 .info h5 {
-    color: #a3a3a3;
+    color: #707070;
     font-size: 18px;
   }
   .sobreNosotros .higieneInfo01 .info p {
-    color: #727272;
+    color: #a3a3a3;
     font-size: 14px;
     text-align: justify;
   }
@@ -1160,11 +1200,11 @@ body main .copyR p {
     margin: 20px;
   }
   .sobreNosotros .higieneInfo02 .info h5 {
-    color: #a3a3a3;
+    color: #707070;
     font-size: 18px;
   }
   .sobreNosotros .higieneInfo02 .info p {
-    color: #727272;
+    color: #a3a3a3;
     font-size: 14px;
     text-align: justify;
   }
@@ -1203,11 +1243,11 @@ body main .copyR p {
     margin: 20px;
   }
   .sobreNosotros .higieneInfo03 .info h5 {
-    color: #a3a3a3;
+    color: #707070;
     font-size: 18px;
   }
   .sobreNosotros .higieneInfo03 .info p {
-    color: #727272;
+    color: #a3a3a3;
     font-size: 14px;
     text-align: justify;
   }

@@ -112,5 +112,9 @@ header {
         color: $grisOscuro;
       }
     }
+    .irArriba{
+      position: fixed;
+      z-index: 50;
+    }
   }
 }

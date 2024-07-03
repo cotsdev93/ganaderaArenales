@@ -1,5 +1,19 @@
 AOS.init();
 
+const irArriba = document.querySelector(".irArriba");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 100) {
+    irArriba.classList.add("mostrar");
+  } else {
+    irArriba.classList.remove("mostrar");
+  }
+});
+
+irArriba.addEventListener("click", () => {
+  window.scrollTo(0, 0);
+});
+
 let intro = document.querySelector(".intro");
 let logo = document.querySelector(".logoHeader");
 let logoSpan = document.querySelectorAll(".logo");
@@ -29,10 +43,30 @@ window.addEventListener("DOMContentLoaded", () => {
 
 const menu = document.querySelector(".menuContainer");
 const navMenu = document.querySelector(".navMenu");
+const opcionMenu1 = document.querySelector(".opcionMenu1");
+const opcionMenu2 = document.querySelector(".opcionMenu2");
+const opcionMenu3 = document.querySelector(".opcionMenu3");
+const opcionMenu4 = document.querySelector(".opcionMenu4");
 
 menu.addEventListener("click", () => {
   navMenu.classList.toggle("show");
   menu.classList.toggle("opacity");
+});
+
+opcionMenu1.addEventListener("click", () => {
+  navMenu.classList.remove("show");
+});
+
+opcionMenu2.addEventListener("click", () => {
+  navMenu.classList.remove("show");
+});
+
+opcionMenu3.addEventListener("click", () => {
+  navMenu.classList.remove("show");
+});
+
+opcionMenu4.addEventListener("click", () => {
+  navMenu.classList.remove("show");
 });
 
 const popup = document.querySelector(".popupContainer");
@@ -91,6 +125,7 @@ function moveToLeft() {
   operacion = operacion - widthImg;
   slider.style.transform = `translate(-${operacion}%)`;
 }
+
 function initMap() {
   var isSmallScreen = window.innerWidth <= 737;
   var centerPosition = isSmallScreen
@@ -142,7 +177,7 @@ function initMap() {
       },
     ],
   };
-  map = new google.maps.Map(document.getElementById("map"), options);
+  const map = new google.maps.Map(document.getElementById("map"), options);
 
   function crearMarcador(lat, lng, iconUrl, title, infoContent) {
     const markerIcon = {
@@ -262,4 +297,3 @@ document.querySelector("form").addEventListener("submit", function (e) {
       console.error("Error:", error);
     });
 });
-

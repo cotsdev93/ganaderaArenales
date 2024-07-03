@@ -21,6 +21,7 @@
     <!-- API Maps -->
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRlNOw4D89YmqFLbBF7YOP1I7X0DXneDM&callback=initMap"
+      async
       defer
     ></script>
     <link
@@ -44,7 +45,7 @@
   </head>
 
   <body>
-    <div class="intro">
+    <!-- <div class="intro">
       <h1 class="logoHeader">
         <span class="logo">Ganadera</span>
         <img class="logo" src="./assets/img/logoSolo.png" alt="" />
@@ -73,7 +74,7 @@
         </div>
         <button id="x"><i class="fa-regular fa-x"></i></button>
       </div>
-    </div>
+    </div> -->
     <div class="blureado">
       <header>
         <nav>
@@ -83,10 +84,18 @@
             <span translate="no">Arenales</span>
           </div>
           <ul class="navMenu">
-            <a href="#sobreNosotros"> <li>About us</li></a>
-            <a href="#exportacion"><li>Export</li></a>
-            <a href="#form"><li>Contact</li></a>
-            <a href="#productos"><li>Products</li></a>
+            <div class="opcionMenu1">
+              <a href="#sobreNosotros"><li>About us</li></a>
+            </div>
+            <div class="opcionMenu2">
+              <a href="#exportacion"><li>Export</li></a>
+            </div>
+            <div class="opcionMenu3">
+              <a href="#form"><li>Contact</li></a>
+            </div>
+            <div class="opcionMenu4">
+              <a href="#productos"><li>Products</li></a>
+            </div>
           </ul>
           <div class="menuContainer">
             <i class="fa-solid fa-bars"></i>
@@ -352,7 +361,9 @@
             </div>
           </div>
         </div>
-
+        <div class="irArriba">
+          <i class="fa-solid fa-circle-chevron-up"></i>
+        </div>
         <footer>
           <div class="logoContainer">
             <span translate="no">Ganadera</span>
