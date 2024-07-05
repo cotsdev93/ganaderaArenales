@@ -6,7 +6,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow:$shadow;
+    box-shadow: $shadow;
     .logoNav {
       display: flex;
       align-items: center;
@@ -57,6 +57,7 @@ header {
         display: flex;
         align-items: center;
         padding-left: 20px;
+
         span {
           font-family: "Poppins";
           font-size: 20px;
@@ -112,7 +113,7 @@ header {
         color: $grisOscuro;
       }
     }
-    .irArriba{
+    .irArriba {
       position: fixed;
       z-index: 50;
     }
