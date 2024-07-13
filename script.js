@@ -4,19 +4,31 @@ document.addEventListener("DOMContentLoaded", function () {
   const irArriba = document.querySelector(".irArriba");
 
   let lastScrollY = window.scrollY;
+  let initialScrollDownY = 0; // Almacena la posición inicial del scroll hacia abajo
+  let scrolledUp = false; // Bandera para saber si el usuario hizo scroll hacia arriba
 
   window.addEventListener("scroll", () => {
     const currentScrollY = window.scrollY;
 
-    if (currentScrollY > 300) {
-      irArriba.classList.add("mostrar");
-    }
+    if (currentScrollY > lastScrollY) {
+      // Scroll hacia abajo
+      if (scrolledUp) {
+        // Si el usuario ha hecho scroll hacia arriba previamente, establecer la posición inicial del scroll hacia abajo
+        initialScrollDownY = currentScrollY;
+        scrolledUp = false;
+      }
 
-    if (currentScrollY < lastScrollY) {
+      // Mostrar el botón solo si se ha desplazado más de 50 píxeles desde la posición inicial del scroll hacia abajo
+      if (currentScrollY > initialScrollDownY + 350) {
+        irArriba.classList.add("mostrar");
+      }
+    } else if (currentScrollY < lastScrollY) {
+      // Scroll hacia arriba
       irArriba.classList.remove("mostrar");
+      scrolledUp = true; // Marcar que el usuario ha hecho scroll hacia arriba
     }
 
-    lastScrollY = currentScrollY;
+    lastScrollY = currentScrollY; // Actualizar la posición del scroll anterior
   });
 
   irArriba.addEventListener("click", () => {
@@ -56,10 +68,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const opcionMenu2 = document.querySelector(".opcionMenu2");
   const opcionMenu3 = document.querySelector(".opcionMenu3");
   const opcionMenu4 = document.querySelector(".opcionMenu4");
+  const blureado2 = document.querySelector(".blureado2");
+  const blureado3 = document.querySelector(".blureado3");
 
   menu.addEventListener("click", () => {
     navMenu.classList.toggle("show");
     menu.classList.toggle("opacity");
+    blureado2.classList.add("blur");
+    blureado3.classList.toggle("blur");
   });
 
   opcionMenu1.addEventListener("click", () => {
@@ -85,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function openPopup() {
     setTimeout(() => {
       popup.classList.add("top");
-      blureado.classList.add("blur");
+      blureado.classList.toggle("blur");
     }, 7000);
   }
   openPopup();
@@ -94,6 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
     popup.classList.remove("top");
     blureado.classList.add("desblureado");
   });
+
   const btnLeft = document.querySelector(".btnLeft");
   const btnRight = document.querySelector(".btnRight");
   const slider = document.getElementById("slider");

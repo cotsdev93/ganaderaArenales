@@ -175,7 +175,7 @@ header nav .menuContainer {
     right: -150px;
     top: 0;
     background-color: #d1d1d1;
-    transition: all 1s;
+    transition: 1s;
     box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1254901961);
   }
   header nav ul li {
@@ -347,13 +347,13 @@ body .top {
   }
 }
 body .blur {
-  filter: blur(2px);
-  transition: 1s;
+  filter: blur(1px);
+  transition: ease 1s;
   z-index: 1;
 }
 body .desblureado {
-  filter: none;
-  transition: 2s;
+  filter: blur(0px);
+  transition: 1s;
 }
 
 body main .exportacion {

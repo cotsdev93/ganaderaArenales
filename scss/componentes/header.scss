@@ -78,7 +78,7 @@ header {
         right: -150px;
         top: 0;
         background-color: $grisClaro;
-        transition: all 1s;
+        transition: 1s;
         box-shadow: 0px 0px 1px 1px #00000020;
 
         li {
@@ -92,7 +92,6 @@ header {
       .show {
         right: 0px;
       }
-
       .menuContainer {
         opacity: 1;
         width: 25px;

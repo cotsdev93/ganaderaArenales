@@ -1,11 +1,11 @@
 body {
   .blur {
-    filter: blur(2px);
-    transition: 1s;
+    filter: blur(1px);
+    transition: ease 1s;
     z-index: 1;
   }
   .desblureado {
-    filter: none;
-    transition: 2s;
+    filter: blur(0px);
+    transition: 1s;
   }
 }
