@@ -1,22 +1,44 @@
 document.addEventListener("DOMContentLoaded", function () {
   AOS.init();
 
-  const popup = document.querySelector(".popupContainer");
   const buttonx = document.getElementById("x");
   const blureado = document.querySelector(".blureado");
+  const popup = document.querySelector(".popupContainer");
 
-  function openPopup() {
-    setTimeout(() => {
-      popup.classList.add("top");
-      blureado.classList.toggle("blur");
-    }, 7000);
+  function popUp() {
+    var screenHeight = window.innerHeight;
+    var popupHeight = popup.offsetHeight;
+
+    var topPosition = (screenHeight - popupHeight) / 2;
+
+    popup.style.top = topPosition + "px";
+
+    blureado.classList.add("blur");
+    window.addEventListener("scroll", popup);
+    window.addEventListener("resize", popup);
   }
-  openPopup();
+
+  setTimeout(() => {
+    popUp();
+  }, 5000);
 
   buttonx.addEventListener("click", () => {
-    popup.classList.remove("top");
+    popup.style.position = "absolute";
+    popup.style.top = "-455";
     blureado.classList.toggle("blur");
+    popup.classList.toggle("top");
+    console.log("funca")
   });
+  
+  window.addEventListener("scroll", popup);
+  // function openPopup() {
+  //   setTimeout(() => {
+  //     popup.classList.add("top");
+  //     blureado.classList.toggle("blur");
+  //   }, 7000);
+  // }
+  // openPopup();
+
 
   const irArriba = document.querySelector(".irArriba");
   const footer = document.querySelector("footer");
@@ -45,10 +67,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const buttonRect = irArriba.getBoundingClientRect();
 
     if (footerRect.top < window.innerHeight) {
-        
-      setTimeout(() =>{
-        console.log("funca")
-      }, 3000);
+      if (form) {
+        setTimeout(() => {
+          console.log("funca");
+        }, 3000);
+      }
       irArriba.style.position = "absolute";
       irArriba.style.top = `${
         window.scrollY + footerRect.top - buttonRect.height - 20
@@ -104,33 +127,42 @@ document.addEventListener("DOMContentLoaded", function () {
   menu.addEventListener("click", () => {
     navMenu.classList.toggle("show");
     menu.classList.toggle("opacity");
-    blureado2.classList.toggle("blur");
-    blureado3.classList.toggle("blur");
+    if (isSmallScreen) {
+      blureado2.classList.toggle("blur");
+      blureado3.classList.toggle("blur");
+    }
   });
 
   opcionMenu1.addEventListener("click", () => {
     navMenu.classList.remove("show");
-    blureado2.classList.toggle("blur");
-    blureado3.classList.toggle("blur");
+    if (isSmallScreen) {
+      blureado2.classList.toggle("blur");
+      blureado3.classList.toggle("blur");
+    }
   });
 
   opcionMenu2.addEventListener("click", () => {
     navMenu.classList.remove("show");
-    blureado2.classList.toggle("blur");
-    blureado3.classList.toggle("blur");
+    if (isSmallScreen) {
+      blureado2.classList.toggle("blur");
+      blureado3.classList.toggle("blur");
+    }
   });
 
   opcionMenu3.addEventListener("click", () => {
     navMenu.classList.remove("show");
-    blureado2.classList.toggle("blur");
-    blureado3.classList.toggle("blur");
+    if (isSmallScreen) {
+      blureado2.classList.toggle("blur");
+      blureado3.classList.toggle("blur");
+    }
   });
 
   opcionMenu4.addEventListener("click", () => {
     navMenu.classList.remove("show");
-    blureado2.classList.toggle("blur");
-    blureado3.classList.toggle("blur");
-    setTimeout(() => {}, 4000);
+    if (isSmallScreen) {
+      blureado2.classList.toggle("blur");
+      blureado3.classList.toggle("blur");
+    }
   });
 
   const btnLeft = document.querySelector(".btnLeft");
