@@ -8,14 +8,18 @@ document.addEventListener("DOMContentLoaded", function () {
   function popUp() {
     var screenHeight = window.innerHeight;
     var popupHeight = popup.offsetHeight;
-
     var topPosition = (screenHeight - popupHeight) / 2;
-
     popup.style.top = topPosition + "px";
-
     blureado.classList.add("blur");
-    window.addEventListener("scroll", popup);
-    window.addEventListener("resize", popup);
+    window.addEventListener("scroll", adjustPopupPosition);
+    window.addEventListener("resize", adjustPopupPosition);
+  }
+
+  function adjustPopupPosition() {
+    var screenHeight = window.innerHeight;
+    var popupHeight = popup.offsetHeight;
+    var topPosition = (screenHeight - popupHeight) / 2;
+    popup.style.top = topPosition + "px";
   }
 
   setTimeout(() => {
@@ -23,22 +27,15 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 5000);
 
   buttonx.addEventListener("click", () => {
-    popup.style.position = "absolute";
-    popup.style.top = "-455";
     blureado.classList.toggle("blur");
-    popup.classList.toggle("top");
-    console.log("funca")
-  });
-  
-  window.addEventListener("scroll", popup);
-  // function openPopup() {
-  //   setTimeout(() => {
-  //     popup.classList.add("top");
-  //     blureado.classList.toggle("blur");
-  //   }, 7000);
-  // }
-  // openPopup();
+    popup.style.position = "absolute";
+    popup.style.top = "-500px";
 
+    window.removeEventListener("scroll", adjustPopupPosition);
+    window.removeEventListener("resize", adjustPopupPosition);
+  });
+
+  window.addEventListener("scroll", popup);
 
   const irArriba = document.querySelector(".irArriba");
   const footer = document.querySelector("footer");

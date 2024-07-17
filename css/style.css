@@ -217,7 +217,7 @@ body {
 }
 body .popupContainer {
   position: fixed;
-  top: -455px;
+  top: -100vh;
   left: 50%;
   transform: translateX(-50%);
   margin: auto;
@@ -231,6 +231,9 @@ body .popupContainer {
   transition: all 2s;
   border-radius: 5px;
   z-index: 3;
+}
+body .popupContainer .hidden {
+  top: -100vh;
 }
 body .popupContainer .popup {
   width: 93%;
@@ -277,9 +280,7 @@ body .popupContainer .popup button {
   font-size: 12px;
 }
 body .top {
-  top: -455px;
-  transition: 2s;
-  position: absolute;
+  background-color: red;
 }
 
 @media (max-width: 737px) {
@@ -435,6 +436,7 @@ body main .irArriba {
   transition: opacity 1s;
   font-size: 38px;
   color: #707070;
+  cursor: pointer;
 }
 body main .mostrar {
   pointer-events: auto;
