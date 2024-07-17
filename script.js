@@ -64,11 +64,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const buttonRect = irArriba.getBoundingClientRect();
 
     if (footerRect.top < window.innerHeight) {
-      if (form) {
-        setTimeout(() => {
-          console.log("funca");
-        }, 3000);
-      }
       irArriba.style.position = "absolute";
       irArriba.style.top = `${
         window.scrollY + footerRect.top - buttonRect.height - 20
@@ -120,6 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const opcionMenu4 = document.querySelector(".opcionMenu4");
   const blureado2 = document.querySelector(".blureado2");
   const blureado3 = document.querySelector(".blureado3");
+  var isSmallScreen = window.innerWidth <= 737;
 
   menu.addEventListener("click", () => {
     navMenu.classList.toggle("show");

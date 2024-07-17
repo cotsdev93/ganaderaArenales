@@ -288,13 +288,12 @@ body .top {
     position: relative;
   }
   body .popupContainer {
-    position: absolute;
-    top: -520px;
-    left: 0;
-    right: 0;
+    position: fixed;
+    top: -100vh;
+    left: 50%;
     margin: auto;
-    width: 350px;
-    height: 505px;
+    width: 280px;
+    height: 400px;
     background-color: #ebebeb;
     display: flex;
     justify-content: center;
@@ -311,6 +310,7 @@ body .top {
     background-color: #f7f9f9;
     justify-content: center;
     position: relative;
+    font-size: 20px;
   }
   body .popupContainer .popup p {
     font-family: "poppins";

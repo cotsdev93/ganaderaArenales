@@ -76,13 +76,12 @@ body {
     position: relative;
 
     .popupContainer {
-      position: absolute;
-      top: -520px;
-      left: 0;
-      right: 0;
+      position: fixed;
+      top: -100vh;
+      left: 50%;
       margin: auto;
-      width: 350px;
-      height: 505px;
+      width: 280px;
+      height: 400px;
       background-color: $grisMasClaro;
       display: flex;
       justify-content: center;
@@ -98,6 +97,7 @@ body {
         background-color: $blanco;
         justify-content: center;
         position: relative;
+        font-size: 20px;
         p {
           font-family: "poppins";
           color: $grisOscuro;
