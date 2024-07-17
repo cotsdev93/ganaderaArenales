@@ -8,15 +8,16 @@ body {
       right: 50%;
       opacity: 0;
       pointer-events: none;
-      transition: all 0.7s;
+      transition: opacity 1s;
       font-size: 38px;
       color: $grisMasOscuro;
     }
     .mostrar {
-      bottom: 25px;
+      // bottom: 25px;
       pointer-events: auto;
       opacity: 1;
     }
+
 
     footer {
       background-color: $blanco;
@@ -92,15 +93,16 @@ body {
         right: -45px;
         opacity: 0;
         pointer-events: none;
-        transition: right 0.4s;
+        transition: 0.4s;
         font-size: 38px;
       }
       .mostrar {
         right: 10px;
         pointer-events: auto;
         opacity: 1;
-        transition: right 1s
+        transition: right 1s ease;
       }
+      
       footer {
         background-color: $blanco;
         width: 100%;

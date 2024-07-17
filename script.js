@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   const irArriba = document.querySelector(".irArriba");
-  // const footer = document.querySelector("footer");
+  const footer = document.querySelector("footer");
 
   let lastScrollY = window.scrollY;
   let initialScrollDownY = 0;
@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const currentScrollY = window.scrollY;
 
     if (currentScrollY > lastScrollY) {
-      console.log("aca")
       if (scrolledUp) {
         initialScrollDownY = currentScrollY;
         scrolledUp = false;
@@ -42,19 +41,22 @@ document.addEventListener("DOMContentLoaded", function () {
       scrolledUp = true;
     }
 
-    // // Ajustar la posición del botón para que no se superponga con el footer
-    // const footerRect = footer.getBoundingClientRect();
-    // const buttonRect = irArriba.getBoundingClientRect();
+    const footerRect = footer.getBoundingClientRect();
+    const buttonRect = irArriba.getBoundingClientRect();
 
-    // if (footerRect.top < window.innerHeight) {
-    //   irArriba.style.position = "absolute";
-    //   irArriba.style.top = `${
-    //     window.scrollY + footerRect.top - buttonRect.height - 20
-    //   }px`;
-    // } else {
-    //   irArriba.style.position = "fixed";
-    //   irArriba.style.top = "85%";
-    // }
+    if (footerRect.top < window.innerHeight) {
+        
+      setTimeout(() =>{
+        console.log("funca")
+      }, 3000);
+      irArriba.style.position = "absolute";
+      irArriba.style.top = `${
+        window.scrollY + footerRect.top - buttonRect.height - 20
+      }px`;
+    } else {
+      irArriba.style.position = "fixed";
+      irArriba.style.top = "85%";
+    }
 
     lastScrollY = currentScrollY;
   });
@@ -128,6 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
     navMenu.classList.remove("show");
     blureado2.classList.toggle("blur");
     blureado3.classList.toggle("blur");
+    setTimeout(() => {}, 4000);
   });
 
   const btnLeft = document.querySelector(".btnLeft");

@@ -429,12 +429,11 @@ body main .irArriba {
   right: 50%;
   opacity: 0;
   pointer-events: none;
-  transition: all 0.7s;
+  transition: opacity 1s;
   font-size: 38px;
   color: #707070;
 }
 body main .mostrar {
-  bottom: 25px;
   pointer-events: auto;
   opacity: 1;
 }
@@ -506,14 +505,14 @@ body main .copyR p {
     right: -45px;
     opacity: 0;
     pointer-events: none;
-    transition: right 0.4s;
+    transition: 0.4s;
     font-size: 38px;
   }
   body main .mostrar {
     right: 10px;
     pointer-events: auto;
     opacity: 1;
-    transition: right 1s;
+    transition: right 1s ease;
   }
   body main footer {
     background-color: #f7f9f9;
