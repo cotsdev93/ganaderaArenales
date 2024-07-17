@@ -1,34 +1,62 @@
 document.addEventListener("DOMContentLoaded", function () {
   AOS.init();
 
+  const popup = document.querySelector(".popupContainer");
+  const buttonx = document.getElementById("x");
+  const blureado = document.querySelector(".blureado");
+
+  function openPopup() {
+    setTimeout(() => {
+      popup.classList.add("top");
+      blureado.classList.toggle("blur");
+    }, 7000);
+  }
+  openPopup();
+
+  buttonx.addEventListener("click", () => {
+    popup.classList.remove("top");
+    blureado.classList.toggle("blur");
+  });
+
   const irArriba = document.querySelector(".irArriba");
+  // const footer = document.querySelector("footer");
 
   let lastScrollY = window.scrollY;
-  let initialScrollDownY = 0; // Almacena la posición inicial del scroll hacia abajo
-  let scrolledUp = false; // Bandera para saber si el usuario hizo scroll hacia arriba
+  let initialScrollDownY = 0;
+  let scrolledUp = false;
 
   window.addEventListener("scroll", () => {
     const currentScrollY = window.scrollY;
 
     if (currentScrollY > lastScrollY) {
-      // Scroll hacia abajo
+      console.log("aca")
       if (scrolledUp) {
-        // Si el usuario ha hecho scroll hacia arriba previamente, establecer la posición inicial del scroll hacia abajo
         initialScrollDownY = currentScrollY;
         scrolledUp = false;
       }
-
-      // Mostrar el botón solo si se ha desplazado más de 50 píxeles desde la posición inicial del scroll hacia abajo
-      if (currentScrollY > initialScrollDownY + 350) {
+      if (currentScrollY > initialScrollDownY + 300) {
         irArriba.classList.add("mostrar");
       }
     } else if (currentScrollY < lastScrollY) {
-      // Scroll hacia arriba
       irArriba.classList.remove("mostrar");
-      scrolledUp = true; // Marcar que el usuario ha hecho scroll hacia arriba
+      scrolledUp = true;
     }
 
-    lastScrollY = currentScrollY; // Actualizar la posición del scroll anterior
+    // // Ajustar la posición del botón para que no se superponga con el footer
+    // const footerRect = footer.getBoundingClientRect();
+    // const buttonRect = irArriba.getBoundingClientRect();
+
+    // if (footerRect.top < window.innerHeight) {
+    //   irArriba.style.position = "absolute";
+    //   irArriba.style.top = `${
+    //     window.scrollY + footerRect.top - buttonRect.height - 20
+    //   }px`;
+    // } else {
+    //   irArriba.style.position = "fixed";
+    //   irArriba.style.top = "85%";
+    // }
+
+    lastScrollY = currentScrollY;
   });
 
   irArriba.addEventListener("click", () => {
@@ -74,41 +102,32 @@ document.addEventListener("DOMContentLoaded", function () {
   menu.addEventListener("click", () => {
     navMenu.classList.toggle("show");
     menu.classList.toggle("opacity");
-    blureado2.classList.add("blur");
+    blureado2.classList.toggle("blur");
     blureado3.classList.toggle("blur");
   });
 
   opcionMenu1.addEventListener("click", () => {
     navMenu.classList.remove("show");
+    blureado2.classList.toggle("blur");
+    blureado3.classList.toggle("blur");
   });
 
   opcionMenu2.addEventListener("click", () => {
     navMenu.classList.remove("show");
+    blureado2.classList.toggle("blur");
+    blureado3.classList.toggle("blur");
   });
 
   opcionMenu3.addEventListener("click", () => {
     navMenu.classList.remove("show");
+    blureado2.classList.toggle("blur");
+    blureado3.classList.toggle("blur");
   });
 
   opcionMenu4.addEventListener("click", () => {
     navMenu.classList.remove("show");
-  });
-
-  const popup = document.querySelector(".popupContainer");
-  const buttonx = document.getElementById("x");
-  const blureado = document.querySelector(".blureado");
-
-  function openPopup() {
-    setTimeout(() => {
-      popup.classList.add("top");
-      blureado.classList.toggle("blur");
-    }, 7000);
-  }
-  openPopup();
-
-  buttonx.addEventListener("click", () => {
-    popup.classList.remove("top");
-    blureado.classList.add("desblureado");
+    blureado2.classList.toggle("blur");
+    blureado3.classList.toggle("blur");
   });
 
   const btnLeft = document.querySelector(".btnLeft");

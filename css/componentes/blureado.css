@@ -1,11 +1,13 @@
-body .blur {
-  filter: blur(1px);
-  transition: ease 1s;
-  z-index: 1;
+body .blureado2 {
+  transition: all 1.3s;
 }
-body .desblureado {
-  filter: blur(0px);
+body main .blureado3 {
+  transition: all 1s;
+}
+body .blur {
+  filter: blur(3px);
   transition: 1s;
+  z-index: 1;
 }
 
 /*# sourceMappingURL=blureado.css.map */

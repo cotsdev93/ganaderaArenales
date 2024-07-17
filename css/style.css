@@ -346,14 +346,16 @@ body .top {
     top: 90px;
   }
 }
-body .blur {
-  filter: blur(1px);
-  transition: ease 1s;
-  z-index: 1;
+body .blureado2 {
+  transition: all 1.3s;
 }
-body .desblureado {
-  filter: blur(0px);
+body main .blureado3 {
+  transition: all 1s;
+}
+body .blur {
+  filter: blur(3px);
   transition: 1s;
+  z-index: 1;
 }
 
 body main .exportacion {
@@ -501,16 +503,17 @@ body main .copyR p {
     height: 40px;
     position: fixed;
     bottom: 0px;
-    right: 5%;
+    right: -45px;
     opacity: 0;
     pointer-events: none;
-    transition: all 0.4s;
+    transition: right 0.4s;
     font-size: 38px;
   }
   body main .mostrar {
-    bottom: 25px;
+    right: 10px;
     pointer-events: auto;
     opacity: 1;
+    transition: right 1s;
   }
   body main footer {
     background-color: #f7f9f9;

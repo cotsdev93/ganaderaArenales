@@ -1,11 +1,15 @@
 body {
-  .blur {
-    filter: blur(1px);
-    transition: ease 1s;
-    z-index: 1;
+  .blureado2 {
+    transition: all 1.3s;
   }
-  .desblureado {
-    filter: blur(0px);
+  main {
+    .blureado3 {
+      transition: all 1s;
+    }
+  }
+  .blur {
+    filter: blur(3px);
     transition: 1s;
+    z-index: 1;
   }
 }
