@@ -1,15 +1,13 @@
-.productos {
-  width: 100%;
-  height: 330px;
+h3 {
+  color: $grisMasOscuro;
+  font-size: 30px;
   padding: 0px 20px 30px 20px;
-  h3 {
-    color: $grisMasOscuro;
-    font-size: 30px;
-  }
-  .productosContainer {
+}
+.productosContainer {
+  height: 80vh;
+  #productos {
     display: flex;
     justify-content: space-around;
-    margin: 40px;
     .productoContainer {
       width: 180px;
       height: 180px;
@@ -27,17 +25,22 @@
       &:hover img {
         transform: translate(-50%, -50%) scale(1.3);
       }
-
-      p {
-        transition: color 0.5s;
-        color: $grisClaro;
+      .data {
+        width: 100%;
         position: absolute;
-        top: 198px;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        transition: 1s ease-in-out;
+        top: 185px;
+        .pNombre {
+          text-align: center;
+          transition: color 0.5s;
+          color: $grisClaro;
+          transition: 1s ease-in-out;
+        }
+        .precio {
+          display: flex;
+          justify-content: space-around;
+        }
       }
-      &:hover p {
+      &:hover .pNombre {
         color: $grisOscuro;
       }
     }

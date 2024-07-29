@@ -175,6 +175,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let operacion = 0;
   let counter = 0;
   let widthImg = 100 / sliderSection.length;
+
   function moveToRight() {
     if (counter >= sliderSection.length - 1) {
       counter = 0;
@@ -371,3 +372,68 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 });
+
+class Producto {
+  constructor(id, nombre, precio, categoria, imagen) {
+    this.id = id;
+    this.nombre = nombre;
+    this.precio = precio;
+    this.categoria = categoria;
+    this.imagen = imagen;
+  }
+}
+
+class BaseDeDatos {
+  constructor() {
+    this.productos = [];
+
+    this.agregarRegistro(1, "Cuadril", 500, "Alimentos", "carne1.png");
+    this.agregarRegistro(2, "Ojo de bife", 500, "Alimentos", "carne2.png");
+    this.agregarRegistro(3, "Bondiola", 500, "Alimentos", "carne3.png");
+    this.agregarRegistro(4, "Nalga", 500, "Alimentos", "carne4.png");
+  }
+
+  agregarRegistro(id, nombre, precio, categoria, imagen) {
+    const producto = new Producto(id, nombre, precio, categoria, imagen);
+    this.productos.push(producto);
+  }
+
+  traerRegistros() {
+    return this.productos;
+  }
+
+  registroPorId(id) {
+    return this.productos.find((producto) => producto.id === id);
+  }
+
+  registroPorNombre(palabra) {
+    return this.productos.filter((producto) =>
+      producto.nombre.toLowerCase().includes(palabra.toLowerCase())
+    );
+  }
+}
+
+const bd = new BaseDeDatos();
+
+const divProductos = document.querySelector("#productos");
+
+function cargarProductos(productos) {
+  divProductos.innerHTML = "";
+
+  for (const producto of productos) {
+    divProductos.innerHTML += `
+      <div class="productoContainer" data-aos="fade-up">
+      <img src="./assets/img/${producto.imagen}"/>
+        <div class="data" > 
+          <p class="pNombre">${producto.nombre}</p>
+          <div class="precio"> 
+          <p>$${producto.precio}</p>
+          <a href="" class="btnAgregar" data-id="${producto.id}"><i class="fa-solid fa-cart-plus"></i></a>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+}
+
+cargarProductos(bd.traerRegistros());

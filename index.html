@@ -20,9 +20,9 @@
 
     <!-- API Maps -->
     <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRlNOw4D89YmqFLbBF7YOP1I7X0DXneDM&callback=initMap"
       async
       defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRlNOw4D89YmqFLbBF7YOP1I7X0DXneDM&callback=initMap"
     ></script>
     <link
       rel="stylesheet"
@@ -45,7 +45,7 @@
   </head>
 
   <body>
-    <div class="intro">
+    <!-- <div class="intro">
       <h1 class="logoHeader">
         <span class="logo">Ganadera</span>
         <img class="logo" src="./assets/img/logoSolo.png" alt="" />
@@ -57,13 +57,13 @@
         <p>
           Este es el unico sitio web oficial de
           <strong>Ganadera Arenales</strong>. No caigas en estafas, no contamos
-          con venta online de productos en mercado interno o externo. ante la
+          con venta online de productos en mercado interno o externo. Ante la
           duda te solicitamos que nos contactes a:
           <strong>info@ganaderaArenales.com</strong> ¡Muchas Gracias!
         </p>
         <p>
-          this is the only official web site of Ganaderia Arenales. we do not
-          have online sales for domestic market and international market. avoid
+          this is the only official web site of Ganaderia Arenales. We do not
+          have online sales for domestic market and international market. Avoid
           frauds! if you need assistance, please contact:
           <strong>info@ganaderaArenales.com</strong>.com Thank you!
         </p>
@@ -74,7 +74,7 @@
         </div>
         <button id="x"><i class="fa-regular fa-x"></i></button>
       </div>
-    </div>
+    </div> -->
     <div class="blureado">
       <header>
         <nav>
@@ -99,6 +99,9 @@
               <a href="#productos"><li>Products</li></a>
             </div>
           </ul>
+          <div id="carrito">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
           <div class="menuContainer">
             <i class="fa-solid fa-bars"></i>
           </div>
@@ -331,46 +334,9 @@
               </form>
             </div>
           </div>
-          <div class="productos" id="productos">
-            <h3 data-aos="fade-up">Productos Destacados</h3>
-            <div class="productosContainer">
-              <div
-                class="productoContainer"
-                data-aos="fade-up"
-                data-aos-delay="100"
-                data-aos-duration="800"
-              >
-                <img src="./assets/img/carne1.png" alt="" />
-                <p>Cuadril</p>
-              </div>
-              <div
-                class="productoContainer"
-                data-aos="fade-up"
-                data-aos-delay="200"
-                data-aos-duration="800"
-              >
-                <img src="./assets/img/carne2.png" alt="" />
-                <p>Ojo de Bife</p>
-              </div>
-              <div
-                class="productoContainer"
-                data-aos="fade-up"
-                data-aos-delay="300"
-                data-aos-duration="800"
-              >
-                <img src="./assets/img/carne3.png" alt="" />
-                <p>Bondiola</p>
-              </div>
-              <div
-                class="productoContainer"
-                data-aos="fade-up"
-                data-aos-delay="400"
-                data-aos-duration="800"
-              >
-                <img src="./assets/img/carne4.png" alt="" />
-                <p>Nalga</p>
-              </div>
-            </div>
+          <h3 data-aos="fade-up">Productos Destacados</h3>
+          <div class="productosContainer">
+            <div id="productos"></div>
           </div>
           <div class="irArriba">
             <i class="fa-solid fa-circle-chevron-up"></i>

@@ -35,6 +35,21 @@ header {
         }
       }
     }
+    #carrito {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: $grisClaro;
+      position: relative;
+      .fa-cart-shopping {
+        font-size: 23px;
+        color: $blanco;
+        position: absolute;
+        top: 52%;
+        left: 47%;
+        transform: translate(-50%, -50%);
+      }
+    }
     .menuContainer {
       opacity: 0;
       width: 25px;
