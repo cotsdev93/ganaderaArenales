@@ -37,7 +37,12 @@ h3 {
         }
         .precio {
           display: flex;
-          justify-content: space-around;
+          justify-content: center;
+          color:$grisMasOscuro;
+          .fa-cart-plus {
+            margin-left: 10px;
+            color: green
+          }
         }
       }
       &:hover .pNombre {

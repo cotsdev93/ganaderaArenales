@@ -427,12 +427,25 @@ function cargarProductos(productos) {
         <div class="data" > 
           <p class="pNombre">${producto.nombre}</p>
           <div class="precio"> 
-          <p>$${producto.precio}</p>
-          <a href="" class="btnAgregar" data-id="${producto.id}"><i class="fa-solid fa-cart-plus"></i></a>
+            <p>$${producto.precio}</p>
+            <a href="#" class="btnAgregar" data-id="${producto.id}">
+              <i class="fa-solid fa-cart-plus"></i>
+            </a>
           </div>
         </div>
       </div>
     `;
+  }
+
+  const botonesAgregar = document.querySelectorAll(".btnAgregar");
+
+  for (const boton of botonesAgregar) {
+    boton.addEventListener("click", (event) => {
+      event.preventDefault();
+      const idProducto = Number(boton.dataset.id);  
+      const producto = bd.registroPorId(idProducto)
+      console.log(producto)
+    });
   }
 }
 
