@@ -108,6 +108,8 @@ header nav {
   justify-content: space-between;
   align-items: center;
   box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1254901961);
+  position: relative;
+  overflow: hidden;
 }
 header nav .logoNav {
   display: flex;
@@ -125,8 +127,8 @@ header nav ul {
   display: flex;
   align-items: center;
   font-family: "Poppins";
-  padding-left: 150px;
   z-index: 2;
+  margin-left: 150px;
 }
 header nav ul li {
   padding: 7px;
@@ -143,6 +145,9 @@ header nav #carrito {
   border-radius: 50%;
   background-color: #d1d1d1;
   position: relative;
+  margin-right: 40px;
+  z-index: 6;
+  cursor: pointer;
 }
 header nav #carrito .fa-cart-shopping {
   font-size: 23px;
@@ -152,17 +157,22 @@ header nav #carrito .fa-cart-shopping {
   left: 47%;
   transform: translate(-50%, -50%);
 }
+header nav .carritoListar {
+  width: 100px;
+  height: 100vh;
+  z-index: 5;
+  background-color: red;
+  position: absolute;
+  right: 0;
+  top: 0px;
+}
+header nav .showCarrito {
+  right: -100px;
+  background-color: blue;
+}
 header nav .menuContainer {
-  opacity: 0;
-  width: 25px;
-  height: 25px;
-  background-color: #d1d1d1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 3px;
-  color: #f7f9f9;
   z-index: 2;
+  display: none;
 }
 
 @media (max-width: 737px) {
@@ -200,11 +210,14 @@ header nav .menuContainer {
     border-top: 1px solid rgba(0, 0, 0, 0.1254901961);
     border-radius: 2;
   }
+  header nav #carrito {
+    margin-right: 0px;
+  }
   header nav .show {
     right: 0px;
   }
   header nav .menuContainer {
-    opacity: 1;
+    display: block;
     width: 25px;
     height: 25px;
     background-color: #d1d1d1;
@@ -215,7 +228,6 @@ header nav .menuContainer {
     color: #f7f9f9;
     margin-right: 20px;
     transition: 1s;
-    opacity: 100%;
   }
   header nav .opacity {
     transition: 1s;

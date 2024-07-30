@@ -413,6 +413,48 @@ class BaseDeDatos {
   }
 }
 
+class Carrito {
+  constructor() {
+    this.carrito = [];
+    this.total = 0;
+    this.cantidadProductos = 0;
+  }
+
+  estaEnCarrito({ id }) {
+    return this.carrito.find((producto) => producto.id === id);
+  }
+
+  agregar(producto) {
+    const productoEnCarrito = this.estaEnCarrito(producto);
+
+    if (!productoEnCarrito) {
+      this.carrito.push({ ...producto, cantidad: 1 });
+    } else {
+      productoEnCarrito.cantidad += 1;
+    }
+  }
+
+  quitar(id) {
+    const indice = this.carrito.findIndex((producto) => producto.id === id);
+
+    if (this.carrito[indice].cantidad > 1) {
+      this.carrito[indice].cantidad--;
+    } else {
+      this.carrito.splice(indice, 1);
+    }
+  }
+
+  listar() {}
+}
+
+const botonCarrito = document.querySelector("#carrito");
+const carritoListar = document.querySelector(".carritoListar");
+
+botonCarrito.addEventListener("click", () => {
+  carritoListar.classList.toggle("showCarrito");
+  console.log("funciona");
+});
+
 const bd = new BaseDeDatos();
 
 const divProductos = document.querySelector("#productos");
@@ -442,9 +484,9 @@ function cargarProductos(productos) {
   for (const boton of botonesAgregar) {
     boton.addEventListener("click", (event) => {
       event.preventDefault();
-      const idProducto = Number(boton.dataset.id);  
-      const producto = bd.registroPorId(idProducto)
-      console.log(producto)
+      const idProducto = Number(boton.dataset.id);
+      const producto = bd.registroPorId(idProducto);
+      console.log(producto);
     });
   }
 }
