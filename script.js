@@ -431,7 +431,7 @@ class Carrito {
       productoEnCarrito.cantidad += 1;
     }
 
-    this.listar()
+    this.listar();
   }
 
   quitar(id) {
@@ -443,7 +443,7 @@ class Carrito {
       this.carrito.splice(indice, 1);
     }
 
-    this.listar()
+    this.listar();
   }
 
   listar() {
@@ -453,22 +453,48 @@ class Carrito {
 
     for (const producto of this.carrito) {
       carritoListar.innerHTML += `
-        <h1>productoCarrito</h1>
-        <a href="#" class="btnQuitar" data-id="${producto.id}">Quitar</a>
-      `;
+        <div class="productoCarrito">
+          <img src="./assets/img/${producto.imagen}" />
+          <div class="dataCarrito">
+            <p class="cNombre">${producto.nombre}</p>
+            <div class="dataCarrito2">
+              <p class="cCantidad">x u. ${producto.cantidad}</p>
+              <p class="cPrecio">$${producto.precio}</p>
+            </div>
+            <a href="#" class="btnAgregar" data-id="${producto.id}">
+              <i class="fa-solid fa-square-plus"></i>
+            </a>
+            <a href="#" class="btnQuitar" data-id="${producto.id}">
+              <i class="fa-solid fa-square-minus"></i>
+            </a>
+          </div>
+        </div>
+        <div class="line"></div>
+        `;
       this.total += producto.precio * producto.cantidad;
       this.cantidadProductos += producto.cantidad;
     }
-    
-    const btnQuitar = document.querySelectorAll(".btnQuitar")
+
+    const btnQuitar = document.querySelectorAll(".btnQuitar");
 
     for (const boton of btnQuitar) {
-      boton.addEventListener("click", (event)=>{
+      boton.addEventListener("click", (event) => {
         event.preventDefault();
-        const idProducto = Number(boton.dataset.id)
-        this.quitar(idProducto)
-      })
+        const idProducto = Number(boton.dataset.id);
+        this.quitar(idProducto);
+      });
+    }
 
+    const botonesAgregar = document.querySelectorAll(".btnAgregar");
+
+    for (const boton of botonesAgregar) {
+      boton.addEventListener("click", (event) => {
+        event.preventDefault();
+        const idProducto = Number(boton.dataset.id);
+        const producto = bd.registroPorId(idProducto);
+        console.log(producto);
+        carrito.agregar(producto);
+      });
     }
   }
 }
@@ -483,11 +509,12 @@ botonCarrito.addEventListener("click", () => {
 
 const bd = new BaseDeDatos();
 
-const carrito = new Carrito(); 
+const carrito = new Carrito();
 
 const divProductos = document.querySelector("#productos");
 
 function cargarProductos(productos) {
+
   divProductos.innerHTML = "";
 
   for (const producto of productos) {
@@ -498,7 +525,7 @@ function cargarProductos(productos) {
             <p class="pNombre">${producto.nombre}</p>
             <div class="precio"> 
             <p>$${producto.precio}</p>
-            <a href="#" class="btnAgregar" data-id="${producto.id}">
+            <a href="#" class="btnAgregarCarrito" data-id="${producto.id}">
               <i class="fa-solid fa-cart-plus"></i>
             </a>
           </div>
@@ -507,16 +534,17 @@ function cargarProductos(productos) {
     `;
   }
 
-  const botonesAgregar = document.querySelectorAll(".btnAgregar");
+  const botonesAgregar = document.querySelectorAll(".btnAgregarCarrito");
 
   for (const boton of botonesAgregar) {
     boton.addEventListener("click", (event) => {
       event.preventDefault();
       const idProducto = Number(boton.dataset.id);
       const producto = bd.registroPorId(idProducto);
-      console.log(producto)
-      carrito.agregar(producto)
-    }); 
+      console.log(producto, "hola este suma banda");
+      carrito.agregar(producto);
+
+    });
   }
 }
 
