@@ -15,7 +15,7 @@ body {
     box-shadow: 0px 0px 2px 2px #00000020;
     transition: all 2s;
     border-radius: 5px;
-    z-index: 3;
+    z-index: 6;
     .popup {
       width: 93%;
       height: 90%;
@@ -24,7 +24,6 @@ body {
       background-color: $blanco;
       justify-content: center;
       position: relative;
-
       p {
         font-size: 12px;
         font-family: "poppins";
@@ -67,7 +66,6 @@ body {
 @media (max-width: 737px) {
   body {
     position: relative;
-
     .popupContainer {
       position: fixed;
       top: -100vh;
@@ -82,6 +80,7 @@ body {
       box-shadow: 0px 0px 2px 2px #00000020;
       transition: 2s;
       border-radius: 5px;
+      z-index: 6;
       .popup {
         width: 93%;
         height: 90%;

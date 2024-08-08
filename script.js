@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+
   AOS.init();
 
   const buttonx = document.getElementById("x");
@@ -371,7 +371,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("Error:", error);
       });
   });
-});
+
 
 class Producto {
   constructor(id, nombre, precio, categoria, imagen) {

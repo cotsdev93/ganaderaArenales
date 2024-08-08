@@ -56,17 +56,21 @@ header {
       }
     }
     .carritoListar {
-      width: 100px;
-      height: 100vh;
       z-index: 5;
-      background-color: red;
-      position: absolute;
-      right: 0;
-      top: 0px;
+      display: flex;
+      flex-direction: column;
+      padding-top: 80px;
+      width: 150px;
+      height: 100%;
+      position: fixed;
+      right: -150px;
+      top: 0;
+      background-color: $blanco;
+      transition: 1s;
+      box-shadow: 0px 0px 1px 1px #00000005;
     }
     .showCarrito {
-      right: -100px;
-      background-color: blue;
+      right: 0px;
     }
     .menuContainer {
       z-index: 2;
@@ -81,7 +85,7 @@ header {
       .logoNav {
         display: flex;
         align-items: center;
-        padding-left: 20px;
+        padding-left: 0px;
 
         span {
           font-family: "Poppins";
@@ -95,8 +99,6 @@ header {
         display: flex;
         flex-direction: column;
         padding-top: 80px;
-        padding-right: 0px;
-        padding-left: 0px;
         width: 150px;
         height: 100%;
         position: fixed;
