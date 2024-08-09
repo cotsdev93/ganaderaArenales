@@ -461,11 +461,11 @@ class Carrito {
               <p class="cCantidad">x u. ${producto.cantidad}</p>
               <p class="cPrecio">$${producto.precio}</p>
             </div>
-            <a href="#" class="btnAgregar" data-id="${producto.id}">
-              <i class="fa-solid fa-square-plus"></i>
-            </a>
             <a href="#" class="btnQuitar" data-id="${producto.id}">
               <i class="fa-solid fa-square-minus"></i>
+            </a>
+            <a href="#" class="btnAgregar" data-id="${producto.id}">
+              <i class="fa-solid fa-square-plus"></i>
             </a>
           </div>
         </div>
@@ -504,7 +504,6 @@ const carritoListar = document.querySelector(".carritoListar");
 
 botonCarrito.addEventListener("click", () => {
   carritoListar.classList.toggle("showCarrito");
-  console.log("funciona");
 });
 
 const bd = new BaseDeDatos();
@@ -514,7 +513,6 @@ const carrito = new Carrito();
 const divProductos = document.querySelector("#productos");
 
 function cargarProductos(productos) {
-
   divProductos.innerHTML = "";
 
   for (const producto of productos) {
@@ -541,9 +539,7 @@ function cargarProductos(productos) {
       event.preventDefault();
       const idProducto = Number(boton.dataset.id);
       const producto = bd.registroPorId(idProducto);
-      console.log(producto, "hola este suma banda");
       carrito.agregar(producto);
-
     });
   }
 }
