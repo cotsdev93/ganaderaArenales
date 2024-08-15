@@ -536,10 +536,12 @@ function cargarProductos(productos) {
   for (const producto of productos) {
     divProductos.innerHTML += `
       <div class="productoContainer" data-aos="fade-up">
-        <img src="./assets/img/${producto.imagen}"/>
-          <div class="data" > 
-            <p class="pNombre">${producto.nombre}</p>
-            <div class="precio"> 
+        <div class="productoFondo">
+          <img src="./assets/img/${producto.imagen}" />
+        </div>
+        <div class="data">
+          <p class="pNombre">${producto.nombre}</p>
+          <div class="precio">
             <p>$${producto.precio}</p>
             <a href="#" class="btnAgregarCarrito" data-id="${producto.id}">
               <i class="fa-solid fa-cart-plus"></i>
