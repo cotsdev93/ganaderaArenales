@@ -4,37 +4,37 @@ const buttonx = document.getElementById("x");
 const blureado = document.querySelector(".blureado");
 const popup = document.querySelector(".popupContainer");
 
-// function popUp() {
-//   var screenHeight = window.innerHeight;
-//   var popupHeight = popup.offsetHeight;
-//   var topPosition = (screenHeight - popupHeight) / 2;
-//   popup.style.top = topPosition + "px";
-//   blureado.classList.add("blur");
-//   window.addEventListener("scroll", adjustPopupPosition);
-//   window.addEventListener("resize", adjustPopupPosition);
-// }
+function popUp() {
+  var screenHeight = window.innerHeight;
+  var popupHeight = popup.offsetHeight;
+  var topPosition = (screenHeight - popupHeight) / 2;
+  popup.style.top = topPosition + "px";
+  blureado.classList.add("blur");
+  window.addEventListener("scroll", adjustPopupPosition);
+  window.addEventListener("resize", adjustPopupPosition);
+}
 
-// function adjustPopupPosition() {
-//   var screenHeight = window.innerHeight;
-//   var popupHeight = popup.offsetHeight;
-//   var topPosition = (screenHeight - popupHeight) / 2;
-//   popup.style.top = topPosition + "px";
-// }
+function adjustPopupPosition() {
+  var screenHeight = window.innerHeight;
+  var popupHeight = popup.offsetHeight;
+  var topPosition = (screenHeight - popupHeight) / 2;
+  popup.style.top = topPosition + "px";
+}
 
-// setTimeout(() => {
-//   popUp();
-// }, 5000);
+setTimeout(() => {
+  popUp();
+}, 5000);
 
-// buttonx.addEventListener("click", () => {
-//   blureado.classList.toggle("blur");
-//   popup.style.position = "absolute";
-//   popup.style.top = "-500px";
+buttonx.addEventListener("click", () => {
+  blureado.classList.toggle("blur");
+  popup.style.position = "absolute";
+  popup.style.top = "-500px";
 
-//   window.removeEventListener("scroll", adjustPopupPosition);
-//   window.removeEventListener("resize", adjustPopupPosition);
-// });
+  window.removeEventListener("scroll", adjustPopupPosition);
+  window.removeEventListener("resize", adjustPopupPosition);
+});
 
-// window.addEventListener("scroll", popup);
+window.addEventListener("scroll", popup);
 
 const irArriba = document.querySelector(".irArriba");
 const footer = document.querySelector("footer");
@@ -83,28 +83,32 @@ let intro = document.querySelector(".intro");
 let logo = document.querySelector(".logoHeader");
 let logoSpan = document.querySelectorAll(".logo");
 
-// window.addEventListener("DOMContentLoaded", () => {
-//   setTimeout(() => {
-//     logoSpan.forEach((span, idx) => {
-//       setTimeout(() => {
-//         span.classList.add("active");
-//       }, (idx + 1) * 400);
-//     });
+function animacionInicial() {
+  setTimeout(() => {
+    logoSpan.forEach((span, idx) => {
+      setTimeout(() => {
+        span.classList.add("active");
+      }, (idx + 1) * 400);
+    });
 
-//     setTimeout(() => {
-//       logoSpan.forEach((span, idx) => {
-//         setTimeout(() => {
-//           span.classList.remove("active");
-//           span.classList.add("fade");
-//         }, (idx + 1) * 50);
-//       });
-//     }, 3000);
+    setTimeout(() => {
+      logoSpan.forEach((span, idx) => {
+        setTimeout(() => {
+          span.classList.remove("active");
+          span.classList.add("fade");
+        }, (idx + 1) * 50);
+      });
+    }, 3000);
 
-//     setTimeout(() => {
-//       intro.style.top = "-100vh";
-//     }, 3200);
-//   });
-// });
+    setTimeout(() => {
+      intro.style.top = "-100vh";
+    }, 3200);
+  });
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  animacionInicial()
+});
 
 const menu = document.querySelector(".menuContainer");
 const navMenu = document.querySelector(".navMenu");
@@ -423,12 +427,12 @@ class Carrito {
       precio: 500,
       categoria: "alimentos",
       imagen: "carne1.png",
-      cantidad: 1
+      cantidad: 1,
     };
 
-    this.carrito.push(productoInicial)
+    this.carrito.push(productoInicial);
 
-    this.listar()
+    this.listar();
   }
 
   estaEnCarrito({ id }) {
@@ -513,10 +517,11 @@ class Carrito {
 }
 
 const botonCarrito = document.querySelector("#carrito");
-const carritoListar = document.querySelector(".carritoListar");
+const carritoListarContainer = document.querySelector(".carritoListarContainer");
+const carritoListar = document.querySelector(".carritoListar")
 
 botonCarrito.addEventListener("click", () => {
-  carritoListar.classList.toggle("showCarrito");
+  carritoListarContainer.classList.toggle("showCarrito");
 });
 
 const bd = new BaseDeDatos();

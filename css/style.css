@@ -183,7 +183,7 @@ header nav .carritoListarContainer {
   width: 180px;
   height: 100%;
   position: fixed;
-  right: 0px;
+  right: -180px;
   top: 0;
   background-color: #f7f9f9;
   transition: 1s;
