@@ -7,15 +7,12 @@ h3 {
   height: auto;
   padding-bottom: 50px;
   #productos {
-    // border: solid 1px blue;
     display: flex;
     justify-content: space-around;
     .productoContainer {
-      // border: solid 1px green;
       height: auto;
       .productoFondo {
         position: relative;
-        // border: solid 1px red;
         width: 180px;
         height: 180px;
         border-radius: 100%;
@@ -28,12 +25,10 @@ h3 {
           transform: translate(-50%, -50%);
           transition: transform 0.7s ease-in-out;
         }
-        &:hover img {
-          transform: translate(-50%, -50%) scale(1.3);
-        }
       }
       .data {
         width: 100%;
+        padding-top: 5px;
         .pNombre {
           text-align: center;
           transition: color 0.5s;
@@ -53,54 +48,71 @@ h3 {
       &:hover .pNombre {
         color: $grisOscuro;
       }
+      &:hover img {
+        transform: translate(-50%, -50%) scale(1.3);
+      }
     }
   }
 }
 
 @media (max-width: 737px) {
-  .productos {
-    height: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    h3 {
-      color: $grisMasOscuro;
-      font-size: 30px;
-    }
-    .productosContainer {
+  h3 {
+    color: $grisMasOscuro;
+    font-size: 27px;
+    padding: 0px 10px 10px 10px;
+    text-align: center;
+  }
+  .productosContainer {
+    height: auto;
+    padding-bottom: 20px;
+    width: 100%;
+    #productos {
       display: flex;
-      margin: 0px;
       flex-wrap: wrap;
       justify-content: space-evenly;
       .productoContainer {
-        width: 135px;
-        height: 135px;
-        border-radius: 100%;
-        background-color: $grisClaro;
-        position: relative;
-        margin: 20px;
-        img {
-          width: 90%;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          transition: transform 0.7s ease-in-out;
+        height: auto;
+        width: 180px;
+        margin: 10px 0px 5px 0px;
+        .productoFondo {
+          position: relative;
+          width: 100%;
+          height: 180px;
+          border-radius: 100%;
+          background-color: $grisClaro;
+          img {
+            width: 90%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: transform 0.7s ease-in-out;
+          }
+        }
+        .data {
+          width: 100%;
+          padding-top: 5px;
+          .pNombre {
+            text-align: center;
+            transition: color 0.5s;
+            color: $grisClaro;
+            transition: 1s ease-in-out;
+          }
+          .precio {
+            display: flex;
+            justify-content: center;
+            color: $grisMasOscuro;
+            .fa-cart-plus {
+              margin-left: 10px;
+              color: green;
+            }
+          }
+        }
+        &:hover .pNombre {
+          color: $grisOscuro;
         }
         &:hover img {
           transform: translate(-50%, -50%) scale(1.3);
-        }
-        p {
-          transition: color 0.5s;
-          color: $grisClaro;
-          position: absolute;
-          top: 150px;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          transition: 1s ease-in-out;
-          white-space: nowrap;
-        }
-        &:hover p {
-          color: $grisOscuro;
         }
       }
     }
