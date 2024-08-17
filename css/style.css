@@ -253,7 +253,7 @@ header nav .carritoListarContainer .carritoListar .line {
 header nav .carritoListarContainer .total {
   font-size: 20px;
   padding: 0px 0px 0px 0px;
-  margin-right: 40px;
+  margin-right: 20px;
   text-align: right;
 }
 header nav .showCarrito {
@@ -268,7 +268,7 @@ header nav .menuContainer {
   header nav .logoNav {
     display: flex;
     align-items: center;
-    padding-left: 0px;
+    padding-left: 10px;
   }
   header nav .logoNav span {
     font-family: "Poppins";
@@ -300,6 +300,9 @@ header nav .menuContainer {
   }
   header nav #carrito {
     margin-right: 0px;
+  }
+  header nav .zindex0 {
+    z-index: 0;
   }
   header nav .show {
     right: 0px;
@@ -446,8 +449,8 @@ body .popupContainer .popup button {
     height: 30px;
     border-radius: 50%;
     position: absolute;
-    right: -20px;
-    top: -20px;
+    right: -40px;
+    top: -50px;
     color: #f7f9f9;
     cursor: pointer;
     border: none;
@@ -485,6 +488,7 @@ body main .exportacion h3 {
   padding: 10px 0px 10px 0px;
   color: #707070;
   font-size: 30px;
+  text-align: left;
 }
 body main .exportacion p {
   padding: 0px 0px 15px 0px;
@@ -1420,7 +1424,10 @@ h3 {
 }
 .productosContainer #productos .productoContainer .data .precio .fa-cart-plus {
   margin-left: 10px;
-  color: green;
+  color: rgb(18, 178, 18);
+}
+.productosContainer #productos .productoContainer .data .precio .fa-cart-plus:active {
+  color: rgb(46, 210, 17);
 }
 .productosContainer #productos .productoContainer:hover .pNombre {
   color: #a3a3a3;
@@ -1447,9 +1454,9 @@ h3 {
     justify-content: space-evenly;
   }
   .productosContainer #productos .productoContainer {
-    height: auto;
-    width: 180px;
-    margin: 10px 0px 5px 0px;
+    height: 100%;
+    width: 160px;
+    margin: 10px 5px 5px 5px;
   }
   .productosContainer #productos .productoContainer .productoFondo {
     position: relative;

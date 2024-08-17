@@ -21,10 +21,6 @@ function adjustPopupPosition() {
   popup.style.top = topPosition + "px";
 }
 
-setTimeout(() => {
-  popUp();
-}, 5000);
-
 buttonx.addEventListener("click", () => {
   blureado.classList.toggle("blur");
   popup.style.position = "absolute";
@@ -107,7 +103,10 @@ function animacionInicial() {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-  animacionInicial()
+  animacionInicial();
+  setTimeout(() => {
+    popUp();
+  }, 5000);
 });
 
 const menu = document.querySelector(".menuContainer");
@@ -417,24 +416,16 @@ class BaseDeDatos {
 
 class Carrito {
   constructor() {
-    this.carrito = [];
+    const carritoStorage = JSON.parse(localStorage.getItem("carrito"));
+
+    this.carrito = carritoStorage || [];
     this.total = 0;
     this.cantidadProductos = 0;
-
-    const productoInicial = {
-      id: 1,
-      nombre: "Cuadril",
-      precio: 500,
-      categoria: "alimentos",
-      imagen: "carne1.png",
-      cantidad: 1,
-    };
-
-    this.carrito.push(productoInicial);
 
     this.listar();
   }
 
+  
   estaEnCarrito({ id }) {
     return this.carrito.find((producto) => producto.id === id);
   }
@@ -448,6 +439,8 @@ class Carrito {
       productoEnCarrito.cantidad += 1;
     }
 
+    localStorage.setItem("carrito", JSON.stringify(this.carrito));
+
     this.listar();
   }
 
@@ -459,6 +452,8 @@ class Carrito {
     } else {
       this.carrito.splice(indice, 1);
     }
+
+    localStorage.setItem("carrito", JSON.stringify(this.carrito));
 
     this.listar();
   }
@@ -513,15 +508,24 @@ class Carrito {
         carrito.agregar(producto);
       });
     }
+
+    spanCantidadProductos.innerText = this.cantidadProductos;
+    spanTotalCarrito.innerText = this.total;
   }
 }
 
+const spanTotalCarrito = document.querySelector("#totalCarrito");
+const spanCantidadProductos = document.querySelector("#cantidadProductos");
 const botonCarrito = document.querySelector("#carrito");
-const carritoListarContainer = document.querySelector(".carritoListarContainer");
-const carritoListar = document.querySelector(".carritoListar")
+const carritoListar = document.querySelector(".carritoListar");
+const carritoListarContainer = document.querySelector(
+  ".carritoListarContainer"
+);
 
 botonCarrito.addEventListener("click", () => {
   carritoListarContainer.classList.toggle("showCarrito");
+  blureado2.classList.toggle("blur");
+  blureado3.classList.toggle("blur");
 });
 
 const bd = new BaseDeDatos();
