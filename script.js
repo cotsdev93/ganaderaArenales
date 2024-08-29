@@ -5,32 +5,14 @@ const blureado = document.querySelector(".blureado");
 const popup = document.querySelector(".popupContainer");
 
 function popUp() {
-  var screenHeight = window.innerHeight;
-  var popupHeight = popup.offsetHeight;
-  var topPosition = (screenHeight - popupHeight) / 2;
-  popup.style.top = topPosition + "px";
+  popup.style.top = "50px";
   blureado.classList.add("blur");
-  window.addEventListener("scroll", adjustPopupPosition);
-  window.addEventListener("resize", adjustPopupPosition);
-}
-
-function adjustPopupPosition() {
-  var screenHeight = window.innerHeight;
-  var popupHeight = popup.offsetHeight;
-  var topPosition = (screenHeight - popupHeight) / 2;
-  popup.style.top = topPosition + "px";
 }
 
 buttonx.addEventListener("click", () => {
   blureado.classList.toggle("blur");
-  popup.style.position = "absolute";
-  popup.style.top = "-500px";
-
-  window.removeEventListener("scroll", adjustPopupPosition);
-  window.removeEventListener("resize", adjustPopupPosition);
+  popup.style.transform = "translateX(-50%) translateY(-100vh)";
 });
-
-window.addEventListener("scroll", popup);
 
 const irArriba = document.querySelector(".irArriba");
 const footer = document.querySelector("footer");
@@ -505,7 +487,7 @@ class Carrito {
         const producto = bd.registroPorId(idProducto);
         console.log(producto);
         carrito.agregar(producto);
-        
+
         Toastify({
           text: `${producto.nombre} fue agregado al carrito`,
           duration: 1500,
@@ -514,7 +496,7 @@ class Carrito {
           },
           offset: {
             x: 180,
-          }
+          },
         }).showToast();
       });
     }

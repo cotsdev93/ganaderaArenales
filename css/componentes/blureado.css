@@ -1,12 +1,12 @@
 body .blureado2 {
-  transition: all 1.3s;
+  transition: all 1.3s ease;
 }
 body main .blureado3 {
-  transition: all 1s;
+  transition: all 1s ease;
 }
 body .blur {
   filter: blur(3px);
-  transition: 1s;
+  transition: 1s ease;
   z-index: 1;
 }
 
