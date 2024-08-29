@@ -425,7 +425,6 @@ class Carrito {
     this.listar();
   }
 
-  
   estaEnCarrito({ id }) {
     return this.carrito.find((producto) => producto.id === id);
   }
@@ -506,6 +505,17 @@ class Carrito {
         const producto = bd.registroPorId(idProducto);
         console.log(producto);
         carrito.agregar(producto);
+        
+        Toastify({
+          text: `${producto.nombre} fue agregado al carrito`,
+          duration: 1500,
+          style: {
+            background: "linear-gradient(to right, #00b09b, #96c93d)",
+          },
+          offset: {
+            x: 180,
+          }
+        }).showToast();
       });
     }
 
@@ -526,6 +536,7 @@ botonCarrito.addEventListener("click", () => {
   carritoListarContainer.classList.toggle("showCarrito");
   blureado2.classList.toggle("blur");
   blureado3.classList.toggle("blur");
+  navMenu.classList.toggle("blur");
 });
 
 const bd = new BaseDeDatos();
@@ -564,6 +575,14 @@ function cargarProductos(productos) {
       const idProducto = Number(boton.dataset.id);
       const producto = bd.registroPorId(idProducto);
       carrito.agregar(producto);
+
+      Toastify({
+        text: `${producto.nombre} fue agregado al carrito`,
+        duration: 1500,
+        style: {
+          background: "linear-gradient(to right, #00b09b, #96c93d)",
+        },
+      }).showToast();
     });
   }
 }

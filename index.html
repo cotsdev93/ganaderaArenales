@@ -42,6 +42,12 @@
     <script src="./script.js" defer></script>
     <!-- LENIS -->
     <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
+    <!-- toastify -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
   </head>
   <body>
     <div class="intro">
@@ -100,11 +106,13 @@
           </ul>
           <div id="carrito">
             <i class="fa-solid fa-cart-shopping"></i>
-            <div class="circuloCantidad"><span id="cantidadProductos">0</span></div>
+            <div class="circuloCantidad">
+              <span id="cantidadProductos">0</span>
+            </div>
           </div>
           <div class="carritoListarContainer">
             <div class="carritoListar"></div>
-            <h3 class="total">total:$<span id="totalCarrito">0</span></h3>
+            <h3 class="total">total: $<span id="totalCarrito">0</span>.-</h3>
           </div>
           <div class="menuContainer">
             <i class="fa-solid fa-bars"></i>
@@ -159,7 +167,6 @@
             <div class="btnLeft"><i class="bx bx-chevron-left"></i></div>
             <div class="btnRight"><i class="bx bx-chevron-right"></i></div>
           </div>
-
           <div class="sobreNosotros" id="sobreNosotros">
             <h3 data-aos="fade-up">Seguridad e Higiene</h3>
             <div class="imgContainer01" data-aos="fade-up">
@@ -382,7 +389,11 @@
         </div>
       </main>
     </div>
+    <script
+      defer
+      asnyc
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
   </body>
 </html>
-
-

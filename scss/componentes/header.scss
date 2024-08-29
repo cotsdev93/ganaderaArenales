@@ -21,12 +21,13 @@ header {
         width: 60px;
       }
     }
-    ul {
+    .navMenu {
       display: flex;
       align-items: center;
       font-family: "Poppins";
       z-index: 2;
-      margin-left: 135px;
+      // margin-left: 135px;
+      transition: 1s;
       li {
         padding: 7px;
         color: $grisClaro;
@@ -46,7 +47,7 @@ header {
       margin-right: 40px;
       z-index: 6;
       cursor: pointer;
-      
+
       .fa-cart-shopping {
         font-size: 23px;
         color: $blanco;
@@ -162,7 +163,9 @@ header {
       z-index: 2;
       display: none;
     }
+
   }
+
 }
 
 @media (max-width: 737px) {
@@ -180,7 +183,7 @@ header {
           width: 40px;
         }
       }
-      ul {
+      .navMenu {
         display: flex;
         flex-direction: column;
         padding-top: 80px;
