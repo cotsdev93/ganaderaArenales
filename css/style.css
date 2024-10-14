@@ -540,10 +540,6 @@ body main:focus, body main:active {
     outline: none;
   }
 }
-@font-face {
-  font-family: "pixel";
-  src: url("../../assets/font/VCR_OSD_MONO_1.001.ttf");
-}
 body main .irArriba {
   width: 40px;
   height: 40px;
