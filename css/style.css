@@ -14,7 +14,7 @@ body {
 
 @font-face {
   font-family: "pixel";
-  src: url("../../assets/font/VCR_OSD_MONO_1.001.ttf");
+  src: url("../assets/font/VCR_OSD_MONO_1.001.ttf");
 }
 .intro {
   position: fixed;
@@ -539,6 +539,10 @@ body main:focus, body main:active {
   body main:focus, body main:active {
     outline: none;
   }
+}
+@font-face {
+  font-family: "pixel";
+  src: url("../../assets/font/VCR_OSD_MONO_1.001.ttf");
 }
 body main .irArriba {
   width: 40px;
