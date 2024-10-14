@@ -1,3 +1,24 @@
+// class BaseDeDatosProductos {
+//   constructor() {
+//     this.productos = []
+//     this.cargarRegistros()
+//   }
+
+//   async cargarRegistros() {
+//     const resultado = await fetch("./JSON/productos.JSON")
+//     this.productos = await resultado.JSON()
+//     cargarProductos(this.productos)
+
+//   }
+// }
+
+
+
+// function cargarProductos(productos) {
+
+
+// }
+
 AOS.init();
 
 const buttonx = document.getElementById("x");
@@ -93,10 +114,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 const menu = document.querySelector(".menuContainer");
 const navMenu = document.querySelector(".navMenu");
-const opcionMenu1 = document.querySelector(".opcionMenu1");
-const opcionMenu2 = document.querySelector(".opcionMenu2");
-const opcionMenu3 = document.querySelector(".opcionMenu3");
-const opcionMenu4 = document.querySelector(".opcionMenu4");
+const opcionMenu = document.querySelectorAll(".opcionMenu");
 const blureado2 = document.querySelector(".blureado2");
 const blureado3 = document.querySelector(".blureado3");
 var isSmallScreen = window.innerWidth <= 737;
@@ -110,37 +128,16 @@ menu.addEventListener("click", () => {
   }
 });
 
-opcionMenu1.addEventListener("click", () => {
-  navMenu.classList.remove("show");
-  if (isSmallScreen) {
-    blureado2.classList.toggle("blur");
-    blureado3.classList.toggle("blur");
-  }
+opcionMenu.forEach((opcion) => {
+  opcion.addEventListener("click", () => {
+    navMenu.classList.remove("show");
+    if (isSmallScreen) {
+      blureado2.classList.toggle("blur");
+      blureado3.classList.toggle("blur");
+    }
+  });
 });
 
-opcionMenu2.addEventListener("click", () => {
-  navMenu.classList.remove("show");
-  if (isSmallScreen) {
-    blureado2.classList.toggle("blur");
-    blureado3.classList.toggle("blur");
-  }
-});
-
-opcionMenu3.addEventListener("click", () => {
-  navMenu.classList.remove("show");
-  if (isSmallScreen) {
-    blureado2.classList.toggle("blur");
-    blureado3.classList.toggle("blur");
-  }
-});
-
-opcionMenu4.addEventListener("click", () => {
-  navMenu.classList.remove("show");
-  if (isSmallScreen) {
-    blureado2.classList.toggle("blur");
-    blureado3.classList.toggle("blur");
-  }
-});
 
 const btnLeft = document.querySelector(".btnLeft");
 const btnRight = document.querySelector(".btnRight");
