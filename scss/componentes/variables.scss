@@ -6,6 +6,7 @@ $gris: #727272;
 $grisOscuro: #a3a3a3;
 $grisMasOscuro: #707070;
 $shadow: 0px 0px 5px 3px #00000020;
+
 * {
   text-decoration: none;
   list-style: none;
@@ -15,6 +16,7 @@ $shadow: 0px 0px 5px 3px #00000020;
   scroll-behavior: smooth;
   font-family: "poppins";
 }
+
 body {
   background-color: $grisMasClaro;
 }
@@ -23,4 +25,3 @@ body {
   font-family: "pixel";
   src: url("../../assets/font/VCR_OSD_MONO_1.001.ttf");
 }
-
